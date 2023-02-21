@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>AIT-TR FrontEnd Lessons</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Marmelad&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<header>
+	<h1 class="menu">Anu belore dela'na - "Солнце ведет нас"</h1>
+	<div class="menu"><a class="menu" href="homeworks.html">Домашние работы</a></div>
+</header>
+
+<body>
+	<div class="page">
+		<!-- <h1>Anu belore dela'na - "Солнце ведет нас"</h1> -->
+		<h3 id="content" class="content">Содержание:</h3>
+
+		<h4><a href="#t1">1. Базовые теги HTML</a></h4>
+		<h4><a href="#t2">2. Теги форм<a></h4>
+		<h5><a href="#t2.1">2.1 Разновидности тега «input»</a></h5>
+		<h4>3. Другая тема</h4>
+		<h4>4. Другая тема</h4>
+
+		<!-- 1. Базовые теги HTML -->
+		<ul>
+			<h2 id="t1" class="title"><a href="#content">---Базовые теги HTML---</h2></a>
+			<div class="instruction">&lt;!DOCTYPE html></div>
+			<span class="text">- Сообщаем браузеру как стоит обрабатывать эту страницу (т.е. в формате HTML)</span>
+			<br>
+			<div class="instruction">&lt;html lang="ru">...&lt;/html></div>
+			<span class="text">- Оболочка документа, указываем язык содержимого</span>
+			<br>
+			<div class="instruction">&lt;head>...&lt;/head></div>
+			<span class="text">- Заголовок страницы, контейнер для других важных данных (не отображается)</span>
+			<br>
+			<div class="instruction">&lt;title>...&lt;/title></div>
+			<span class="text">- Заголовок страницы в браузере</span>
+			<br>
+			<div class="instruction">&lt;link rel="stylesheet" href="css/style.css"></div>
+			<span class="text">- Привязка CSS файла к HTML</span>
+			<br>
+			<div class="instruction">&lt;meta http-equiv="Content-type" content="text/html; charset=UTF-8" /></div>
+			<span class="text">- Кодировка страницы</span>
+			<table>
+				<tr>
+					<td>
+						<div class="idea-img"></div>
+					</td>
+					<td class="hint">Теги «title» и «meta» - содержатся внутри тега «head», а сам «head» внутри тега «html». После тега «head» следует тег «body»
+					</td>
+				</tr>
+			</table>
+			<div class="instruction">&lt;body>...&lt;/body></div>
+			<span class="text">- Отображаемое тело страницы</span>
+			<br>
+			<div class="instruction">&lt;header>...&lt;/header> и &lt;footer>&lt;/footer></div>
+			<span class="text">- строчные теги (на всю длину страницы). Отображается информация над/под телом страницы</span>
+			<br>
+			<div class="instruction">&lt;h1..h6>...&lt;/h1..h6></div>
+			<span class="text">- заголовки разных размеров</span>
+			<br>
+			<div class="instruction">&lt;div>...&lt;/div></div>
+			<span class="text">- блочный блок информации (всегда с новой строки и занимает всю длину)</span>
+			<br>
+			<div class="instruction">&lt;span>...&lt;/span></div>
+			<span class="text">- строчный блок информации (равен длине текста)</span>
+			<br>
+			<div class="instruction">&lt;br></div>
+			<span class="text">- перенос на новую строку в строчном элементе</span>
+		</ul>
+		<!-- 1. Базовые теги HTML (конец)-->
+
+		<!-- 2. Теги форм -->
+		<ul>
+			<h2 id="t2" class="title"><a href="#content">---Теги форм---</a></h2>
+			<div class="instruction">&lt;form action="">&lt;/form></div>
+			<span class="text">- оболочка формы, блочный тег, отвечает за передачу данных. В графе <b>«action»</b> указывается путь. Оставив это поле пустым - будет <span class="red-marked">ошибка</span>. Можно поставить заглушку <b>#</b>.</span>
+			<br>
+			<div class="instruction">&lt;form method="">&lt;/form></div>
+			<span class="text">- метод передачи формы. Атрибут <b>«method»</b> может иметь 2 значения:
+				<br><span class="description"><span class="atribute">«get»</span> - используется по умолчанию. Передача данных идет прямо в адресной строке, <u>видны</u> пользователю и могут быть использованы неоднократно.</span>
+				<br><span class="description"><span class="atribute">«post»</span> - передает данные <u>скрытно</u> используя запрос браузера. Подходит для больших объемов информации. Может передавать прикрепленные файлы с атрибутом «<span class="atribute">enctype</span>=<span class="parameter">"multipart/form-data"</span>»</span>
+				<br>
+
+				<!-- 2.1 Разновидности тега «input» -->
+				<h2 id="t2.1" class="subtitle"><a href="#content">Разновидности тега «input»</a></h2>
+				<div class="instruction">&lt;input type="text" name="username" value="" /></div>
+				<span class="text">
+					<br>Создает форму для ввода текста, например, имени пользователя. Вводимый текст виден пользователю. Значение <b>«value»</b> впишет в форму определенный текст заранее.</span>
+				<br>
+				<input placeholder="Введите имя" type="text" name="username" value="" />
+				<br><br>
+				<div class="instruction">&lt;input type="password" name="userpass" value="" /></div>
+				<span class="text">
+					<br>Создает форму для ввода пароля. Вводимые данные <span class="red-marked">не видны</span> пользователю.</span>
+				<br>
+				<input placeholder="Введите пароль" type="password" name="userpass" value="" />
+				<br><br>
+				<div class="instruction">&lt;input type="tel" name="userphone" value="+" /></div>
+				<span class="text">
+					<br>Создает форму для ввода номера телефона (для мобильных устройств включится спец.клавиатура)</span>
+				<br><input placeholder="Введите номер телефона" type="tel" name="userpass" value="+" />
+				<table>
+					<tr>
+						<td>
+							<div class="idea-img"></div>
+						</td>
+						<br>
+						<td class="hint">Ко всем трём типам можно применить атрибут <span class="atribute">«placeholder=""»</span> перед атрибутом <span class="atribute">«type»</span>, который напишет подсказку внутри поля.
+						</td>
+					</tr>
+				</table>
+				<br>
+				<div class="instruction">&lt;p>&lt;input <span class="atribute">checked</span> type="radio" name="sex" value="male" /><span class="black-marked"><i>Мужской</i></span>&lt;/p></div>
+				<br>
+				<div class="instruction">&lt;p>&lt;input type="radio" name="sex" value="female" /><span class="black-marked"><i>Женский</i></span>&lt;/p></div>
+				<br><span class="text">Форма для выбора в формате «или/или». Единственная форма, где должно быть указано одинаковое имя в атрибуте <b>«name»</b>. Можно перед одним из атрибутов <b>«type»</b> указать атрибут <b>«checked»</b>, тогда один из выборов будет выбран заранее, при загрузке/обновлении страницы.</span>
+				<br>
+				<p><input type="radio" name="sex" value="male" />Мужской</p>
+				<p><input type="radio" name="sex" value="female" />Женский</p>
+				<br>
+				<div class="instruction">&lt;p>&lt;input type="checkbox" name="car" value="yes" /><span class="black-marked"><i>Наличие авто</i></span>&lt;/p></div>
+				<br><span class="text">Форма множественного выбора (в виде галочек). Также работает с артрибутом <b>«checked»</b> (ставит галочки заранее, при загрузке/обновлении страницы)</span>
+				<p><input type="checkbox" name="car" value="car" />Наличие авто</p>
+				<p><input type="checkbox" name="move-ready" value="move-ready" />Готовность к переезду</p>
+				<p><input type="checkbox" name="business-trip " value="business-trip " />Готовность к командировкам</p>
+				<br>
+				<div class="instruction">&lt;p>&lt;input type="file" name="file" /><span class="black-marked"><i>Скан/фото паспорта</i></span>&lt;/p></div>
+				<br><span class="text">Форма прикрепления файла. Работает только в теге формы с атрибутом «post» и «<span class="atribute">enctype</span>=<span class="parameter">"multipart/form-data"</span>» <a href="#t2">(см.выше)</a>.</span>
+				<br>
+				<span class="black-marked"><i>Скан/фото паспорта:</i><input type="file" name="file" /></span>
+				<table>
+					<tr>
+						<td>
+							<div class="idea-img2"></div>
+						</td>
+						<br>
+						<td class="hint">Значения атрибута «name» всегда должны различаться во всех формах (кроме «radio»).
+						</td>
+					</tr>
+				</table>
+				<br>
+				<div class="instruction">&lt;div>&lt;/div></div>
+				<span class="text">- блочный блок информации (всегда с новой строки и занимает всю длину)</span>
+				<br>
+				<div class="instruction">&lt;span>&lt;/span></div>
+				<span class="text">- строчный блок информации (равен длине текста)</span>
+				<br>
+				<div class="instruction">&lt;br></div>
+				<span class="text">- перенос на новую строку в строчном элементе</span>
+
+		</ul>
+		<!-- 2. Теги форм (конец)-->
+	</div>
+
+
+
+
+
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+</body>
+
+</html>
