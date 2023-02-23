@@ -1,252 +1,398 @@
+@charset "UTF-8";
 /* Очистка стилей */
-* {padding: 0;	margin: 0;	border: 0;}
-*,*:before,*:after {-moz-box-sizing: border-box;
--webkit-box-sizing: border-box;box-sizing: border-box;}
-:focus,:active {outline: none;}
-a:focus,a:active {outline: none;}
-nav,header,footer,aside {display: block;}
-html,body {height: 100%;width: 100%;font-size: 100%;line-height: 1;font-size: 14px;
--ms-text-size-adjust: 100%;-moz-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;}
-input,button,textarea {	font-family: inherit;}
-input::-ms-clear {display: none;}
-button {	cursor: pointer;}
-button::-moz-focus-inner {padding: 0;border: 0;}
-a,a:visited {text-decoration: none;}
-a:hover {text-decoration: none;}
-ul li {list-style: none;}
-img {	vertical-align: top;}
-h1,h2,h3,h4,h5,h6 {font-size: inherit;font-weight: 400;}
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, header, footer, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
 /* Конец очистки стилей */
-
-div.page{
-	margin-left: 50px;
+body {
+  height: 100vh;
+  background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(199, 230, 216, 0.46) 0.1%, rgba(233, 226, 226, 0.28) 90.1%);
+  background-size: cover;
+  background-position: center;
+  font-family: Marmelad;
+  font-size: 18px;
+  line-height: 25px;
 }
 
-body{
-	background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(199, 230, 216, 0.46) 0.1%, rgba(233, 226, 226, 0.28) 90.1%);
-	height: 100%;
-	font-family: Marmelad;
-	font-size: 18px;
-	line-height: 35px;
+/* Header + Menu */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(122, 29, 45);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 5%;
+  -webkit-box-shadow: 0 5px 10px black;
+          box-shadow: 0 5px 10px black;
 }
 
-a {
-	color: rgb(40, 33, 82); /* Цвет ссылок */
-}
-a:visited {
-	color: rgb(40, 33, 82); /* Цвет посещенных ссылок */
-}
-a:active {
-	color: rgb(40, 33, 82); /* Цвет активных ссылок */
-}
-
-a.menu {
-	color: rgb(233, 233, 233);
-	/* Цвет ссылок */
+header .logo {
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(253, 253, 253);
+  text-shadow: 3px 4px 3px black;
+  -webkit-transition: 6s;
+  transition: 6s;
+  opacity: 0;
 }
 
-a.menu:visited {
-	color: rgb(233, 233, 233);
-	/* Цвет посещенных ссылок */
+header .logo:hover {
+  color: rgb(255, 196, 0);
+  opacity: 1;
+  scale: 1.1;
+  -webkit-transition: 6s linear;
+  transition: 6s linear;
 }
 
-a.menu:active {
-	color: rgb(233, 233, 233);
-	/* Цвет активных ссылок */
+header nav ul li {
+  position: relative;
+  float: left;
 }
 
-h1.menu{
-	padding-top: 25px;
-	font-size: 35px;
-	font-weight: bold;
-	color: rgb(253, 253, 253);
-	text-align: center;
-	vertical-align: middle;
-	background-color: rgb(122, 29, 45);
-	text-shadow: 3px 4px 3px black  ;
-	height: 90px;
-	border: 2px solid black;
-	font-family: Rubik;
+header nav ul li a {
+  display: block;
+  padding: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  min-height: 50px;
+  padding-top: 15px;
+  color: rgb(238, 238, 238);
+  background-color: rgb(122, 29, 45);
 }
 
-h2.title{
-	padding: 50px 0 20px 70px;
-	text-align: center;
-	font-size: 40px;
-	font-weight: bold;
+header nav ul li a:hover {
+  color: rgb(122, 29, 45);
+  background-color: rgb(238, 238, 238);
+}
+
+nav ul li ul {
+  position: absolute;
+  left: 0;
+  width: 180px;
+  display: none;
+}
+
+nav ul li ul li {
+  width: 100%;
+  -webkit-box-shadow: 5px 5px 10px black;
+          box-shadow: 5px 5px 10px black;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+nav ul li ul li:first-child {
+  border-top: 1px solid black;
+}
+
+nav ul li ul li ul {
+  left: 180px;
+  top: 0;
+}
+
+nav ul li:hover > ul {
+  display: initial;
+}
+
+/* END (Header + Menu) */
+main {
+  /* задаем отступ для страницы*/
+  padding: 50px 0 0 50px;
+}
+
+h2.title {
+  padding: 50px 0 20px 70px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
 }
 
 h2.subtitle {
-	padding: 50px 0 20px 70px;
-	text-align: center;
-	font-size: 30px;
-	font-weight: bold;
+  padding: 50px 0 20px 70px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
 }
 
-div.menu{
-	font-size: 22px;
-	font-weight: bold;
-	color: rgb(240, 240, 240);
-	background-color: rgb(26, 13, 73);
-	height: 50px;
-	padding-left: 30px;
-	text-align: center;
-	padding-top: 5px;
-	border-bottom: 2px solid black;
-	font-family: Rubik;
+h3.content {
+  padding: 30px 0 15px 0;
+  font-size: 36px;
+  font-weight: bold;
+  color: rgb(40, 33, 82);
 }
 
-h3.content{
-	padding: 30px 0 15px 0;
-	font-size: 36px;
-	font-weight: bold;
-	color: rgb(40, 33, 82);
-}
-
-h4{
-	color: rgb(40, 33, 82);
-	font-size: 22px;
-	padding: 5px 0 0 50px;
-	font-weight: 700;
+h4 {
+  color: rgb(40, 33, 82);
+  font-size: 22px;
+  padding: 5px 0 0 50px;
+  font-weight: 700;
 }
 
 h5 {
-	color: rgb(40, 33, 82);
-	font-size: 20px;
-	padding: 5px 0 0 110px;
-	font-weight: 700;
+  color: rgb(40, 33, 82);
+  font-size: 20px;
+  padding: 5px 0 0 110px;
+  font-weight: 700;
 }
 
-div.instruction{
-	display: inline-block;
-	font-weight: bold;
-	color: brown;
-	height: 28px;
+div.instruction {
+  display: inline-block;
+  font-weight: bold;
+  color: brown;
+  height: 28px;
 }
 
 .idea-img {
-	background: url(../source/idea.png) no-repeat;
-	background-size: 100%;
-	height: 50px;
-	width: 50px;
+  background: url(../source/img/idea.png) no-repeat;
+  background-size: 100%;
+  height: 50px;
+  width: 50px;
 }
 
-.idea-img2 {
-	background: url(../source/attention.png) no-repeat;
-	background-size: 100%;
-	margin: 0 10px 0 10px;
-	height: 35px;
-	width: 35px;
+.attention-img {
+  background: url(../source/img/attention.png) no-repeat;
+  background-size: 100%;
+  margin: 0 10px 0 10px;
+  height: 35px;
+  width: 35px;
 }
 
 td.hint {
-	font-size: 20px;
-	font-weight: bold;
+  font-size: 20px;
+  font-weight: bold;
 }
 
-span.description{
-	padding-left: 30px;
+span.description {
+  padding-left: 30px;
 }
 
-span.atribute{
-	color: rgb(13, 165, 39);
-	font-weight: bold;
-	font-size: 20px;
+span.atribute {
+  color: rgb(13, 165, 39);
+  font-weight: bold;
+  font-size: 20px;
 }
 
 span.parameter {
-	color: rgb(48, 72, 212);
-	font-weight: bold;
+  color: rgb(48, 72, 212);
+  font-weight: bold;
 }
 
-span.red-marked{
-	color: rgb(228, 31, 31);
-	font-weight: bold;
+span.red-marked {
+  color: rgb(228, 31, 31);
+  font-weight: bold;
 }
 
 span.black-marked {
-	color: rgb(0, 0, 0);
-	font-weight: bold;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
 }
 
+h3.content {
+  padding: 30px 0 25px 0;
+  font-size: 36px;
+  font-weight: bold;
+  color: rgb(40, 33, 82);
+}
+
+a.goto {
+  display: inline-block;
+  color: white;
+  background-color: rgb(22, 49, 80);
+  border-radius: 20px;
+  font-size: 16px;
+  height: 25px;
+  width: 70px;
+  margin-left: 10px;
+}
+
+a.goto:hover {
+  background-color: rgb(121, 192, 224);
+  color: black;
+}
 
 /*----------------------------------*/
-/*---------CSS тегов "input"--------*/
-
-input[type=text]{
-	width: 250px;
-	padding: 12px 20px;
-	box-sizing: border-box;
-	border: 3px solid #ccc;
-	-webkit-transition: 0.5s;
-	transition: 0.5s;
-	outline: none;
+/*---------CSS теги "input"--------*/
+input[type=text] {
+  width: 250px;
+  padding: 12px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
 }
+
 input[type=text]:focus {
-	border: 3px solid #555;
+  border: 3px solid #555;
 }
 
 input[type=password] {
-	width: 250px;
-	padding: 12px 20px;
-	box-sizing: border-box;
-	border: 3px solid #ccc;
-	-webkit-transition: 0.5s;
-	transition: 0.5s;
-	outline: none;
+  width: 250px;
+  padding: 12px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
 }
 
 input[type=password]:focus {
-	border: 3px solid #070aa7;
+  border: 3px solid #070aa7;
 }
 
 input[type=tel] {
-	width: 250px;
-	padding: 12px 20px;
-	box-sizing: border-box;
-	border: 3px solid #ccc;
-	-webkit-transition: 0.5s;
-	transition: 0.5s;
-	outline: none;
+  width: 250px;
+  padding: 12px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
 }
 
 input[type=tel]:focus {
-	border: 3px solid #860505;
+  border: 3px solid #860505;
 }
 
 input[type=radio] {
-	background: #fff;
-	border: 2px solid #ddd;
-	display: inline-block;
-	vertical-align: middle;
-	width: 20px;
-	height: 20px;
-	padding: 2px;
-	margin-left: 30px;
-	margin-right: 10px;
-	text-align: center;
-
+  background: #fff;
+  border: 2px solid #ddd;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  padding: 2px;
+  margin-left: 30px;
+  margin-right: 10px;
+  text-align: center;
 }
+
 input[type=radio]:focus {
-	width: 25px;
-	height: 25px;
+  width: 25px;
+  height: 25px;
 }
 
 input[type=checkbox] {
-	display: inline-block;
-	vertical-align: middle;
-	width: 22px;
-	height: 22px;
-	margin: 0 10px 3px 30px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 22px;
+  height: 22px;
+  margin: 0 10px 3px 30px;
 }
+
 input[type=checkbox]:hover {
-	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.719);
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.719);
+          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.719);
 }
 
 input[type=file] {
-	margin-left: 10px;
+  margin-left: 10px;
 }
 
 /*---------END тегов "input"--------*/
 /*----------------------------------*/
+/*---------Теги таблиц th/tr/td--------*/
+th.month {
+  font-size: 25px;
+  font-weight: bold;
+  border: 3px solid black;
+  line-height: 35px;
+  background-color: #113e9e;
+  color: aliceblue;
+}
 
+td.column-text {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+td.goto-text {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 17px;
+  width: 100px;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 0px;
+}
