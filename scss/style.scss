@@ -40,6 +40,7 @@ header{
 	align-items: center;
 	padding: 0 5%;
 	box-shadow: 0 5px 10px black;
+	z-index: 10;
 }
 
 header .logo{
@@ -224,11 +225,20 @@ a.goto {
 	height: 25px;
 	width: 70px;
 	margin-left: 10px;
+	border: 1px solid rgb(22, 49, 80);
+	box-shadow: 2px 3px 3px black;
 }
 
 a.goto:hover {
-	background-color: rgb(121, 192, 224);
-	color: black;
+	background-color: whitesmoke;
+	color: rgb(22, 49, 80);
+}
+a.goto:active {
+	position: relative;
+	transform: translate(2px, 3px);
+	background-color: whitesmoke;
+	color: rgb(22, 49, 80);
+	box-shadow: 0px 0px 0px black;
 }
 /*----------------------------------*/
 /*---------CSS теги "input"--------*/
@@ -317,20 +327,16 @@ th.month {
 	color: aliceblue;
 }
 
-tr {}
-
 td.column-text {
-	
-font-size: 20px;
+	font-size: 20px;
 	font-weight: bold;
 }
 
-td.goto-text {
+.goto-text {
 	display: inline-block;
 	font-weight: bold;
 	font-size: 17px;
 	width: 100px;
 	text-align: center;
-	vertical-align: middle;
 	padding-top: 0px;
 }
