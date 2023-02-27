@@ -171,9 +171,10 @@ h5 {
 .hint {
 	font-weight: bold;
 	font-size: 20px;
-	padding-left: 10px;
-	line-height: 40px;
+	line-height: 30px;
 	background-color: #d8d7d7;
+	padding: 10px 0 10px 10px;
+	min-height: 60px;
 }
 .hint:before{
 	content: '';
@@ -188,9 +189,9 @@ h5 {
 .attention {
 	font-weight: bold;
 	font-size: 20px;
-	padding-left: 20px;
-	line-height: 60px;
 	background-color: #d8d7d7;
+	padding: 10px 0 10px 20px;
+	min-height: 60px;
 }
 .attention:before {
 	content: '';
