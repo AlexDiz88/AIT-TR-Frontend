@@ -24,8 +24,8 @@ body {
 	background-size: cover;
 	background-position: center;
 	font-family: Marmelad;
-	font-size: 18px;
-	line-height: 25px;
+	font-size: 20px;
+	line-height: 35px;
 }
 
 a, a:visited, a:hover{
@@ -142,7 +142,7 @@ h3.content{
 	padding: 30px 0 15px 0;
 	font-size: 36px;
 	font-weight: bold;
-	color: rgb(40, 33, 82);
+	color: rgb(39, 74, 139);
 }
 
 h4{
@@ -163,7 +163,8 @@ h5 {
 	span{
 	font-weight: bold;
 	color: brown;
-	font-size: 18px;
+	// color: rgb(18, 76, 153);
+	font-size: 20px;
 	}
 }
 
@@ -171,7 +172,7 @@ h5 {
 	font-weight: bold;
 	font-size: 20px;
 	padding-left: 10px;
-	line-height: 60px;
+	line-height: 40px;
 	background-color: #d8d7d7;
 }
 .hint:before{
@@ -241,10 +242,12 @@ a.goto {
 	color: white;
 	background-color: rgb(22, 49, 80);
 	border-radius: 20px;
-	font-size: 16px;
+	font-size: 19px;
+	font-weight: bold;
 	height: 25px;
 	width: 70px;
-	margin-left: 10px;
+	text-align: center;
+	padding-bottom: 32px;
 	border: 1px solid rgb(22, 49, 80);
 	box-shadow: 2px 3px 3px black;
 }
@@ -335,6 +338,17 @@ input[type=checkbox]:hover {
 input[type=file] {
 	margin-left: 10px;
 }
+
+textarea.example{
+	border: 1px solid black;
+}
+
+select.example{
+	font-weight: bold;
+	font-size: 20px;
+	width: 150px;
+	border: 1px solid black;
+}
 /*---------END тегов "input"--------*/
 /*----------------------------------*/
 /*---------Теги таблиц th/tr/td--------*/
@@ -348,15 +362,7 @@ th.month {
 }
 
 td.column-text {
+	padding-left: 10px;
 	font-size: 20px;
 	font-weight: bold;
-}
-
-.goto-text {
-	display: inline-block;
-	font-weight: bold;
-	font-size: 17px;
-	width: 100px;
-	text-align: center;
-	padding-top: 0px;
 }

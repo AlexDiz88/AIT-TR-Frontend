@@ -83,10 +83,11 @@
 		<!-- 1.2. Теги таблиц -->
 
 		<h2 id="t1.2" class="subtitle"><a href="#content">Теги таблиц</a></h2>
-		<p class="instruction"><span>&lt;table></span>- </p>
-		<p class="instruction"><span>&lt;tr></span>- </p>
-		<p class="instruction"><span>&lt;td></span>- </p>
-		<p class="instruction"><span>&lt;th></span>- </p>
+		<p class="instruction"><span>&lt;table></span>- основной тег, контейнер для строк и ячеек таблицы</p>
+		<p class="instruction"><span>&lt;tr></span>- строка в таблице (Table Row). Содержит внутри себя ячейки таблицы</p>
+		<p class="instruction"><span>&lt;td></span>- ячейка в таблице (Table Data). Ячейки в таблице образуют столбцы, т.к. отдельного тега для столбцов в HTML нет</p>
+		<p class="instruction"><span>&lt;th></span>- тег для заголовков ячеек. По умолчанию выделяет текст жирным и центрирует его в ячейке</p>
+		<p><b>Более подробный разбор тегов таблиц</b> <a class="goto" href="blank.html">Go!</a></p>
 
 		<!-- 2. Теги форм -->
 
@@ -115,7 +116,7 @@
 		<input placeholder="Введите номер телефона" type="tel" name="userpass" value="+" />
 
 		<br><br>
-		<p class="hint">Ко всем типам форм с вводом данных можно применить атрибут <span class="atribute">«placeholder=""»</span> перед атрибутом <span class="atribute">«type»</span>, который напишет подсказку внутри поля.</p>
+		<p class="hint">Ко всем типам форм с вводом данных можно применить атрибут <span class="atribute">«placeholder=""»</span>, который напишет подсказку внутри поля.</p>
 
 		<br>
 		<p class="instruction"><span>&lt;p>&lt;input <span class="atribute">checked</span> type="radio" name="sex" value="male" /><span class="black-marked"><i>Мужской</i></span>&lt;/p></span></p>
@@ -138,7 +139,39 @@
 		<br>
 		<p class="attention">Значения атрибута «name» всегда должны различаться во всех формах (кроме «radio»).</p>
 
-		<!-- 2. Теги форм (конец)-->
+		<!-- 2.2 Другие теги форм -->
+
+		<h2 id="t2.2" class="subtitle"><a href="#content">Другие теги форм</a></h2>
+
+		<p class="instruction"><span>&lt;textarea name="text" id="" cols="30" rows="10">&lt;/textarea></span></p>
+		<p>Форма для ввода многострочного текста, например примечания или комментария. Атрибуты <b>«cols»</b> и <b>«rows»</b> можно удалять, так как размеры настраиваются позже с помощью JS и CSS</p>
+		<textarea class="example" placeholder=" Ваш комментарий" name="text" id="" cols="30" rows="5"></textarea>
+
+		<p class="instruction">
+			<span>&lt;select name="color">
+				<br>&lt;option value="red"><span class="black-marked"><i>Красный</i></span>&lt;/option>
+				<br>&lt;option selected value="blue"><span class="black-marked"><i>Синий</i></span>&lt;/option>
+				<br>&lt;option value="green"><span class="black-marked"><i>Зеленый</i></span>&lt;/option>
+				</select>
+			</span>
+		</p>
+		<select class="example" name="color">
+			<option value="red">Красный</option>
+			<option selected value="blue">Синий</option>
+			<option value="green">Зеленый</option>
+		</select>
+		<p>Выпадающий список. Теги <b>«select»</b> и <b>«option»</b> всегда используются в сочетании друг с другом, причем тег <b>«option»</b> должен быть вложен внутрь тега <b>«select»</b>. Можно перед одним из атрибутов <b>«value»</b> указать атрибут <b>«selected»</b>, тогда это значение будет выбрано заранее при загрузке/обновлении страницы. Если тегу <b>«select»</b> добавить атрибут <b>«multiple»</b>, то форма перестанет быть выпадающей и станет в виде списка.</p>
+		<select multiple class="example" name="color">
+			<option value="red">Красный</option>
+			<option selected value="blue">Синий</option>
+			<option value="green">Зеленый</option>
+		</select>
+
+		<p class="hint">К любому тегу формы кроме «form» можно применить атрибут «disabled», который сделает форму неактивной (окрасит в серый цвет) и не отправит данные из неё на сервер.
+			Ко всем тегам можно применить атрибут «tabindex» с порядковым номером. Данный номер определяет очередность форм при переключении по ним с помощью кнопки «Tab». Для всех значений тега «input type="radio"» атрибут «tabindex» должен быть указан с одинаковым номером.
+		</p>
+
+
 	</main>
 
 
