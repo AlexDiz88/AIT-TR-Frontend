@@ -18,18 +18,18 @@
 	<div>
 		<a href="../homeworks_list.html">Назад</a>
 	</div>
-	<form action="#">
-		<table cellspacing="0">
+	<form action="submit.html" method="get">
+		<table>
 			<tr>
 				<td colspan="2">
 					<fieldset>
 						<legend>Пользователь</legend>
 						<div>Имя:</div>
-						<input type="text" name="username" value="" />
+						<input type="text" name="username" required>
 						<div>Email:</div>
-						<input type="email" name="email" value="" />
+						<input type="email" name="email" required>
 						<div>Мобильный:</div>
-						<input type="tel" name="phone_number" value="" />
+						<input type="tel" name="phone_number" required>
 					</fieldset>
 				</td>
 			</tr>
@@ -37,20 +37,20 @@
 				<td>
 					<fieldset>
 						<legend>Интересы</legend>
-						<label><input type="checkbox" name="FrontEnd" value="" />FrontEnd</label>
-						<br><label><input type="checkbox" name="BackEnd" value="" />BackEnd</label>
-						<br><label><input type="checkbox" name="QA" value="" />QA</label>
-						<br><label><input type="checkbox" name="Database" value="" />Database</label>
-						<br><label><input type="checkbox" name="DevOps" value="" />DevOps</label>
+						<label><input type="checkbox" name="FrontEnd">FrontEnd</label>
+						<br><label><input type="checkbox" name="BackEnd">BackEnd</label>
+						<br><label><input type="checkbox" name="QA">QA</label>
+						<br><label><input type="checkbox" name="Database">Database</label>
+						<br><label><input type="checkbox" name="DevOps">DevOps</label>
 					</fieldset>
 				</td>
 				<td>
 					<fieldset>
 						<legend>Занятия</legend>
-						<label><input type="radio" name="lesson_time" value="" />Утром</label>
-						<label><input type="radio" name="lesson_time" value="" />Вечером</label>
-						<label><br><input type="radio" name="lesson_frequency" value="" />3 раза в неделю</label>
-						<label><input type="radio" name="lesson_frequency" value="" />каждый день</label>
+						<label><input type="radio" name="lesson_time" value="morming">Утром</label>
+						<label><input type="radio" name="lesson_time" value="evening">Вечером</label>
+						<label><br><input type="radio" name="lesson_frequency" value="3per_week">3 раза в неделю</label>
+						<label><input type="radio" name="lesson_frequency" value="every_day">каждый день</label>
 					</fieldset>
 				</td>
 			</tr>
@@ -61,9 +61,10 @@
 				<td>
 					<select name="pc_skills">
 						<option value="none">"Компьютер", что это?</option>
-						<option value="none">Начинающий пользователь</option>
-						<option value="none">Уверенный пользователь</option>
-						<option value="none">Профессионал</option>
+						<option value="beginner">Начинающий пользователь</option>
+						<option value="intermediate">Уверенный пользователь</option>
+						<option value="pro">Профессионал</option>
+					</select>
 				</td>
 			</tr>
 			<tr>
@@ -73,11 +74,11 @@
 			</tr>
 			<tr>
 				<td colspan="2">
-					<textarea name="study_targets" id="" cols="90" rows="5">1) Хотел бы найти новую работу в IT</textarea>
+					<textarea name="study_targets" cols="90" rows="5">1) Хотел бы найти новую работу в IT</textarea>
 				</td>
 			</tr>
 		</table>
-		<input type="submit">
+		<button type="submit">Отправить</button>
 	</form>
 </body>
 

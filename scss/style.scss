@@ -26,6 +26,7 @@ body {
 	font-family: Marmelad;
 	font-size: 20px;
 	line-height: 35px;
+	padding-top: 50px;
 }
 
 a, a:visited, a:hover{
@@ -211,9 +212,9 @@ span.atribute{
 }
 
 span.parameter {
-	color: rgb(48, 72, 212);
+	color: rgb(184, 74, 10);
 	font-weight: bold;
-	font-size: 16px;
+	font-size: 18px;
 }
 
 span.red-marked{
@@ -224,6 +225,19 @@ span.red-marked{
 span.black-marked {
 	color: rgb(0, 0, 0);
 	font-weight: bold;
+	font-size: 17px;
+}
+
+.tag{
+	font-size: 21px;
+	font-weight: bold;
+	color: #113e9e;
+}
+.tag::before{
+	content: '<';
+}
+.tag::after {
+	content: '>';
 }
 
 h3.content {
@@ -335,6 +349,16 @@ input[type=file] {
 	margin-left: 10px;
 }
 
+input[type=date] {
+	font-size: 17px;
+	font-weight: bold;
+	background-color: #f1df3b;
+	height: 40px;
+	width: 120px;
+	border: 1px solid black;
+	text-align: center;
+}
+
 textarea.example{
 	border: 1px solid black;
 }
@@ -361,4 +385,35 @@ td.column-text {
 	padding-left: 10px;
 	font-size: 20px;
 	font-weight: bold;
+}
+
+button.example{
+	color: rgb(240, 240, 240);
+	background-color: rgb(160, 64, 9);
+	font-size: 19px;
+	font-weight: bold;
+	height: 50px;
+	width: 180px;
+	border-radius: 20px;
+	box-shadow: 3px 5px 5px black;
+}
+button.example:active {
+	position: relative;
+	transform: translate(3px, 5px);
+	box-shadow: 0px 0px 0px black;
+}
+
+fieldset.example{
+	font-size: 15px;
+	font-weight: bold;
+	display: inline-block;
+	padding: 5px 70px 5px 20px;
+	border: 1px solid black;
+	border-radius: 20px;
+	
+}
+
+span.microhint{
+	font-size: 10px;
+	font-weight: normal;
 }
