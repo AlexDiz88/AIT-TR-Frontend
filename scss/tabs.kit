@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marmelad&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Tabs example</title>
+    <style>
+      div.parent-1 {
+        position: static;
+      }
+      div.parent-2 {
+        position: relative;
+      }
+      div.parent-3 {
+        position: fixed;
+        /* top: 180px;
+        left: 150px; */
+      }
+      div.child1-1 {
+        position: static;
+        min-height: 50px;
+        background-color: rgb(109, 221, 184);
+        padding: 12px 10px;
+      }
+      div.child1-2 {
+        position: relative;
+        min-height: 50px;
+        background-color: rgb(80, 44, 126);
+        color: white;
+        padding: 12px 10px;
+        left: 50px;
+        bottom: 10px;
+      }
+      div.child1-3 {
+        position: fixed;
+        min-height: 50px;
+        background-color: rgb(153, 56, 0);
+        color: white;
+        padding: 12px 10px;
+        left: 50px;
+        top: 750px;
+      }
+      div.child1-4 {
+        position: absolute;
+        min-height: 50px;
+        background-color: rgb(11, 104, 8);
+        color: white;
+        padding: 12px 10px;
+        left: 65px;
+        top: 650px;
+      }
+      div.child1-5 {
+        position: sticky;
+        min-height: 50px;
+        background-color: rgb(104, 8, 8);
+        color: white;
+        padding: 12px 10px;
+        top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- @import "../header.html" -->
+    <main>
+      <div class="tabs">
+        <input type="radio" name="tab-btn" id="tab-btn-1" checked />
+        <label for="tab-btn-1">Parent: Static</label>
+        <input type="radio" name="tab-btn" id="tab-btn-2" />
+        <label for="tab-btn-2">Parent: Relative</label>
+        <input type="radio" name="tab-btn" id="tab-btn-3" />
+        <label for="tab-btn-3">Parent: fixed</label>
+        <div class="parent-1" id="content-1">
+          <h3 class="content">Block position : Static</h3>
+          <p>
+            Значение по умолчанию. Статичное позиционирование. Любой элемент,
+            добавленный на страницу, будет иметь это значение и будет расположен
+            в нормальном потоке документа согласно контексту форматирования
+            родительского элемента. Свойства left, right, top, bottom и z-index
+            игнорируются.
+          </p>
+          <br />
+          <p>
+            Элемент со значением position: static не является позиционированным
+            элементом. Это важный момент, потому что элементы с любым другим
+            значением свойства position создают внутри себя контекст наложения и
+            становятся опорными. Опорным элементом будем называть такой,
+            относительно которого позиционируются дочерние элементы.
+          </p>
+          <div class="child1-1">
+            <b>Child 1 : Static</b> (неподвижен, left/right/top/bottom и z-index
+            игнорируются)
+          </div>
+          <div class="child1-2">
+            Child 2 : Relative (left: 50px; bottom: 10px; Смещается относительно
+            "Parent")
+          </div>
+          <div class="child1-3">
+            Child 3 : Fixed (left: 50px; top: 750px; вырван из потока,
+            стабильная позиция относительно окна браузера, стал строчным)
+          </div>
+          <div class="child1-4">
+            Child 4 : Absolute (left: 65px; top: 650px; вырван из потока,
+            позиция относительно "Parent", но игнорирует "Parent=Static", стал
+            строчным)
+          </div>
+          <div class="child1-5">
+            Child 5 : Sticky (top: 100px; ведет себя как Static, пока не
+            достигнет указанной позиции относительно родителя, после чего
+            "прилипнет")
+          </div>
+        </div>
+
+        <div class="parent-2" id="content-2">
+          <h3 class="content">Block position : Relative</h3>
+          <p>
+            Элемент позиционируется так же, как и статичный, но его отображение
+            может быть смещено относительно своего начального положения при
+            помощи свойств left, right, top, bottom. Это смещение чисто
+            визуальное и не затрагивает положение соседних элементов, кроме
+            случая, когда элемент выходит за границы родителя, имеющего
+            возможность прокрутки. <br />
+            На странице элемент будет занимать столько же места, как если бы он
+            имел статичное позиционирование.
+          </p>
+          <br /><br />
+          <div class="child1-1">
+            <b>Child 1 : Static</b> (неподвижен, left/right/top/bottom и z-index
+            игнорируются)
+          </div>
+          <div class="child1-2">
+            Child 2 : Relative (left: 50px; bottom: 10px; Смещается относительно
+            "Parent")
+          </div>
+          <div class="child1-3">
+            Child 3 : Fixed (left: 50px; top: 750px; вырван из потока,
+            стабильная позиция относительно окна браузера, стал строчным)
+          </div>
+          <div class="child1-4">
+            Child 4 : Absolute (left: 65px; top: 650px; вырван из потока,
+            позиция относительно "Parent", но игнорирует "Parent=Static", стал
+            строчным)
+          </div>
+          <div class="child1-5">
+            Child 5 : Sticky (top: 100px; ведет себя как Static, пока не
+            достигнет указанной позиции относительно родителя, после чего
+            "прилипнет")
+          </div>
+        </div>
+
+        <div class="parent-3" id="content-3">
+          <h3 class="content">Block position : Fixed</h3>
+          <p>
+            Иногда требуется позиционировать элемент не относительно родителя, а
+            относительно окна браузера вне зависимости от вложенности. Для
+            решения подобной задачи подходит position: fixed. У такого способа
+            позиционирования есть ряд особенностей: Элемент убирается из
+            основного потока документа. То есть перестаёт влиять на положение
+            окружающих элементов и на размер родителя. Элемент перестаёт
+            взаимодействовать со всеми элементами, кроме своих потомков. Элемент
+            позиционируется относительно окна браузера, за исключением случаев,
+            если один из родителей имеет значения свойств transform, perspective
+            или filter, отличные от none. В этом случае блок становится опорным
+          </p>
+          <div class="child1-1">
+            <b>Child 1 : Static</b> (неподвижен, left/right/top/bottom и z-index
+            игнорируются)
+          </div>
+          <div class="child1-2">
+            Child 2 : Relative (left: 50px; bottom: 10px; Смещается относительно
+            "Parent")
+          </div>
+          <div class="child1-3">
+            Child 3 : Fixed (left: 50px; top: 750px; вырван из потока,
+            стабильная позиция относительно окна браузера, стал строчным)
+          </div>
+          <div class="child1-4">
+            Child 4 : Absolute (left: 65px; top: 650px; вырван из потока,
+            позиция относительно "Parent", но игнорирует "Parent=Static", стал
+            строчным)
+          </div>
+          <div class="child1-5">
+            Child 5 : Sticky (top: 100px; ведет себя как Static, пока не
+            достигнет указанной позиции относительно родителя, после чего
+            "прилипнет")
+          </div>
+        </div>
+      </div>
+    </main>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  </body>
+</html>
