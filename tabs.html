@@ -104,11 +104,15 @@
     <main>
       <div class="tabs">
         <input type="radio" name="tab-btn" id="tab-btn-1" checked />
-        <label for="tab-btn-1">Parent: Static</label>
+        <label for="tab-btn-1">Parent: static</label>
         <input type="radio" name="tab-btn" id="tab-btn-2" />
-        <label for="tab-btn-2">Parent: Relative</label>
+        <label for="tab-btn-2">Parent: relative</label>
         <input type="radio" name="tab-btn" id="tab-btn-3" />
         <label for="tab-btn-3">Parent: fixed</label>
+        <input type="radio" name="tab-btn" id="tab-btn-4" />
+        <label for="tab-btn-4">Parent: absolute</label>
+        <input type="radio" name="tab-btn" id="tab-btn-5" />
+        <label for="tab-btn-5">Parent: sticky</label>
         <div class="parent-1" id="content-1">
           <h3 class="content">Block position : Static</h3>
           <p>
@@ -223,6 +227,14 @@
             достигнет указанной позиции относительно родителя, после чего
             "прилипнет")
           </div>
+        </div>
+        <div class="parent-4" id="content-4">
+          <h3 class="content">Block position : Absolute</h3>
+          <p class="attention">В разработке</p>
+        </div>
+        <div class="parent-5" id="content-5">
+          <h3 class="content">Block position : Sticky</h3>
+          <p class="attention">В разработке</p>
         </div>
       </div>
     </main>

@@ -509,7 +509,9 @@ td.column-text {
 /* отобразить контент, связанный с выбранной радиокнопкой */
 #tab-btn-1:checked ~ #content-1,
 #tab-btn-2:checked ~ #content-2,
-#tab-btn-3:checked ~ #content-3 {
+#tab-btn-3:checked ~ #content-3,
+#tab-btn-4:checked ~ #content-4,
+#tab-btn-5:checked ~ #content-5 {
   display: block;
 }
 .tabs > label {
@@ -520,9 +522,9 @@ td.column-text {
   background-color: #8a8989;
   color: #ffffff;
   border: 1px solid black;
-  padding: 5px 18px;
+  padding: 5px 12px;
   border-radius: 5px;
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.5;
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
   cursor: pointer;
