@@ -3,19 +3,20 @@
 
 // переменные
 $maincolor: rgb(122, 29, 45);
+$linkcolor: rgb(30, 25, 54);
 
 // шаблоны
 // для применения шаблона к селектору: @extend %имя_шаблона
-%normal_link_style{
-	font-size: 16px;
-	color: #113e9e;
+%normal_link_style {
+  font-size: 16px;
+  color: #113e9e;
 }
 
 // миксины
 // для применения миксины к селектору: @include volume_shadow(5px, 5px)
-@mixin volume_shadow($hs, $vs){
-	box-shadow: $hs $vs 10px black;
-	border: 1px solid black;
+@mixin volume_shadow($hs, $vs) {
+  box-shadow: $hs $vs 10px black;
+  border: 1px solid black;
 }
 
 // основной лист стилей
@@ -35,7 +36,7 @@ body {
 a,
 a:visited,
 a:hover {
-  color: rgb(40, 33, 82);
+  color: $linkcolor;
 }
 
 /* Header + Menu */
@@ -48,13 +49,13 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 5%;
+  padding: 0 4%;
   box-shadow: 0 5px 10px black;
   z-index: 10;
 }
 
 header .logo {
-  font-size:18px;
+  font-size: 18px;
   font-weight: bold;
   color: rgb(253, 253, 253);
   text-shadow: 3px 4px 3px black;
@@ -79,14 +80,13 @@ header nav ul li a.main__menu {
   padding: 8px 15px;
   font-size: 18px;
   font-weight: bold;
-  min-height:40px;
-//   padding-top: 10px;
+  min-height: 40px;
   color: rgb(238, 238, 238);
-  background-color: rgb(122, 29, 45);
+  background-color: $maincolor;
 }
 
 header nav ul li a:hover {
-  color: rgb(122, 29, 45);
+  color: $maincolor;
   background-color: rgb(238, 238, 238);
 }
 
@@ -99,7 +99,6 @@ nav ul li ul {
 
 nav ul li ul li {
   width: 100%;
-  -webkit-box-shadow: 5px 5px 10px black;
   box-shadow: 5px 5px 10px black;
   border-bottom: 1px solid black;
   border-left: 1px solid black;
@@ -460,7 +459,52 @@ td.column-text {
   background-color: rgb(58, 58, 58);
   border-bottom: 1px solid rgba(0, 0, 0, 0);
 }
-/*---------END табов(tabs)--------*/
+/*---------END tabs--------*/
+/*----------------------------------*/
+/*---------Flexbox--------*/
+.flex-container {
+  margin: 0 30px 0 0;
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #27292e;
+    border-bottom: none;
+  }
+
+  &__month {
+    border-bottom: 2px solid #27292e;
+    background-color: #143886;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  &__row {
+    border-bottom: 2px solid #27292e;
+    :hover {
+      // background-color: rgb(119, 119, 119);
+    }
+  }
+
+  &__item {
+    min-height: 100%;
+    font-size: 20px;
+    padding: 3px 10px;
+    font-weight: bold;
+    > a {
+      display: block;
+    }
+    > a:hover {
+      color: $maincolor;
+      font-size: 21px;
+    }
+  }
+}
+
+/*---------END Flexbox--------*/
 
 button.example {
   color: rgb(240, 240, 240);

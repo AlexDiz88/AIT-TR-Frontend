@@ -101,7 +101,7 @@ body {
 a,
 a:visited,
 a:hover {
-  color: rgb(40, 33, 82);
+  color: rgb(30, 25, 54);
 }
 
 /* Header + Menu */
@@ -120,7 +120,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 5%;
+  padding: 0 4%;
   -webkit-box-shadow: 0 5px 10px black;
           box-shadow: 0 5px 10px black;
   z-index: 10;
@@ -174,7 +174,7 @@ nav ul li ul {
 nav ul li ul li {
   width: 100%;
   -webkit-box-shadow: 5px 5px 10px black;
-  box-shadow: 5px 5px 10px black;
+          box-shadow: 5px 5px 10px black;
   border-bottom: 1px solid black;
   border-left: 1px solid black;
   border-right: 1px solid black;
@@ -546,7 +546,50 @@ td.column-text {
   border-bottom: 1px solid rgba(0, 0, 0, 0);
 }
 
-/*---------END табов(tabs)--------*/
+/*---------END tabs--------*/
+/*----------------------------------*/
+/*---------Flexbox--------*/
+.flex-container {
+  margin: 0 30px 0 0;
+}
+.flex-container__column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 2px solid #27292e;
+  border-bottom: none;
+}
+.flex-container__month {
+  border-bottom: 2px solid #27292e;
+  background-color: #143886;
+  color: white;
+  text-align: center;
+  line-height: 40px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.flex-container__row {
+  border-bottom: 2px solid #27292e;
+}
+.flex-container__item {
+  min-height: 100%;
+  font-size: 20px;
+  padding: 3px 10px;
+  font-weight: bold;
+}
+.flex-container__item > a {
+  display: block;
+}
+.flex-container__item > a:hover {
+  color: rgb(122, 29, 45);
+  font-size: 21px;
+}
+
+/*---------END Flexbox--------*/
 button.example {
   color: rgb(240, 240, 240);
   background-color: rgb(160, 64, 9);
