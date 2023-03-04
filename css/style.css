@@ -94,7 +94,6 @@ body {
   background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(199, 230, 216, 0.46) 0.1%, rgba(233, 226, 226, 0.28) 90.1%);
   background-size: cover;
   background-position: center;
-  font-family: Marmelad;
   font-size: 20px;
   line-height: 35px;
 }
@@ -116,19 +115,19 @@ header {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0 5%;
   -webkit-box-shadow: 0 5px 10px black;
-  box-shadow: 0 5px 10px black;
+          box-shadow: 0 5px 10px black;
   z-index: 10;
 }
 
 header .logo {
-  font-size: 25px;
+  font-size: 18px;
   font-weight: bold;
   color: rgb(253, 253, 253);
   text-shadow: 3px 4px 3px black;
@@ -152,11 +151,10 @@ header nav ul li {
 
 header nav ul li a.main__menu {
   display: block;
-  padding: 15px;
-  font-size: 20px;
+  padding: 8px 15px;
+  font-size: 18px;
   font-weight: bold;
-  min-height: 50px;
-  padding-top: 15px;
+  min-height: 40px;
   color: rgb(238, 238, 238);
   background-color: rgb(122, 29, 45);
 }
@@ -198,7 +196,7 @@ nav ul li:hover > ul {
 /* END (Header + Menu) */
 main {
   /* задаем отступ для страницы*/
-  padding: 100px 0 0 100px;
+  padding: 70px 0 0 60px;
 }
 
 h2.title {
@@ -241,16 +239,17 @@ h5 {
   font-size: 20px;
 }
 
-.hint {
+p.hint {
   font-weight: bold;
   font-size: 20px;
-  line-height: 30px;
+  line-height: 40px;
   background-color: #d8d7d7;
-  padding: 10px 0 10px 10px;
-  min-height: 60px;
+  padding: 3px 0 3px 10px;
+  min-height: 40px;
+  margin: 20px 0;
 }
 
-.hint:before {
+p.hint:before {
   content: "";
   display: inline-block;
   background: url(../source/img/idea.png) no-repeat;
@@ -260,15 +259,16 @@ h5 {
   vertical-align: middle;
 }
 
-.attention {
+p.attention {
   font-weight: bold;
   font-size: 20px;
   background-color: #d8d7d7;
-  padding: 10px 0 10px 20px;
+  padding: 12px 0 5px 10px;
   min-height: 60px;
+  margin: 20px 0;
 }
 
-.attention:before {
+p.attention:before {
   content: "";
   display: inline-block;
   background: url(../source/img/attention.png) no-repeat;
@@ -335,10 +335,9 @@ a.goto {
   border-radius: 20px;
   font-size: 19px;
   font-weight: bold;
-  height: 25px;
+  line-height: 28px;
   width: 70px;
   text-align: center;
-  padding-bottom: 32px;
   border: 1px solid rgb(22, 49, 80);
   -webkit-box-shadow: 2px 3px 3px black;
   box-shadow: 2px 3px 3px black;

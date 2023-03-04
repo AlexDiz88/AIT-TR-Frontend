@@ -1,35 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anu belore dela'na</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      figure {
+        opacity: 0;
+        transition: 15s;
+      }
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Anu belore dela'na</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Marmelad&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/style.css">
-	<style>
-		figure {
-			opacity: 0;
-			transition: 15s;
-		}
+      figure:hover {
+        transition: 15s;
+        opacity: 1;
+      }
 
-		figure:hover {
-			transition: 15s;
-			opacity: 1;
-		}
+      img {
+        height: 1000px;
+        width: 50%;
+        object-fit: cover;
+      }
 
-		img {
-			height: 1000px;
-			width: 50%;
-			object-fit: cover;
-		}
-
-		/* temp */
-		/* header.suncats {
+      /* temp */
+      /* header.suncats {
 			position: relative;
 			background-color: rgb(122, 29, 45);
 			display: flex;
@@ -39,38 +34,43 @@
 			box-shadow: 0 5px 10px black;
 			z-index: 3;
 		} */
-	</style>
-</head>
+    </style>
+  </head>
 
-<body>
-	<header>
-		<nav>
-			<ul>
-				<li><a class="main__menu" href="index.html">На главную</a></li>
-				<li><a class="main__menu" href="homeworks_list.html">Домашние работы</a></li>
-				<li><a class="main__menu" href="blank.html">Учебник</a>
-					<ul>
-						<li><a class="main__menu" href="blank.html">HTML</a></li>
-						<li><a class="main__menu" href="blank.html">CSS</a></li>
-						<li><a class="main__menu" href="blank.html">JavaScript</a>
-							<ul>
-								<li><a class="main__menu" href="blank.html">JQuery</a></li>
-								<li><a class="main__menu" href="blank.html">Node.js</a></li>
-							</ul>
-						</li>
-					</ul>
-				</li>
-				<li><a class="main__menu" href="blank.html">Примеры</a></li>
-				<li><a class="main__menu" href="blank.html">Прочее</a></li>
-			</ul>
-		</nav>
-	</header>
-	<main style="background-color: black; padding: 0px; height: 1000px;">
-		<figure>
-			<img src="source/img/sun_cat3.jpg" alt=""><img src="source/img/sun_cat2.jpg" alt="">
-		</figure>
-	</main>
-
-</body>
-
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a class="main__menu" href="index.html">На главную</a></li>
+          <li>
+            <a class="main__menu" href="homeworks_list.html">Домашние работы</a>
+          </li>
+          <li>
+            <a class="main__menu" href="blank.html">Учебник</a>
+            <ul>
+              <li><a class="main__menu" href="blank.html">HTML</a></li>
+              <li><a class="main__menu" href="blank.html">CSS</a></li>
+              <li>
+                <a class="main__menu" href="blank.html">JavaScript</a>
+                <ul>
+                  <li><a class="main__menu" href="blank.html">JQuery</a></li>
+                  <li><a class="main__menu" href="blank.html">Node.js</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a class="main__menu" href="blank.html">Примеры</a></li>
+          <li><a class="main__menu" href="blank.html">Прочее</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main style="background-color: black; padding: 0px; height: 1000px">
+      <figure>
+        <img src="source/img/sun_cat3.jpg" alt="" /><img
+          src="source/img/sun_cat2.jpg"
+          alt=""
+        />
+      </figure>
+    </main>
+  </body>
 </html>
