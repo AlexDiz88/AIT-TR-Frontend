@@ -1,111 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Position</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Marmelad&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/style.css">
-	<style>
-		.main__position {
-			font-size: 18px;
-			line-height: 30px;
-		}
-
-		.static__parent {
-			margin-top: 150px;
-			background-color: antiquewhite;
-			width: 500px;
-			height: 300px;
-			box-shadow: 5px 10px 10px black;
-			border: 2px solid black;
-			padding: 50px;
-			text-align: center;
-		}
-
-		.child1-1 {
-			background-color: rgb(199, 126, 31);
-			color: azure;
-			position: absolute;
-			top: 100px;
-			left: 30px;
-		}
-
-		.child1-2 {
-			background-color: rgb(29, 143, 105);
-			color: azure;
-			position: fixed;
-			top: 175px;
-			z-index: 5;
-		}
-
-		.child1-3 {
-			background-color: rgb(83, 35, 128);
-			color: azure;
-			position: relative;
-			top: 10px;
-			left: 15px;
-			z-index: 1;
-		}
-
-		.child1-4 {
-			background-color: rgb(150, 46, 20);
-			color: azure;
-			z-index: 2;
-		}
-
-		.child1-5 {
-			background-color: rgb(43, 51, 170);
-			color: azure;
-		}
-
-		.relative__parent {
-			margin-top: 50px;
-			background-color: antiquewhite;
-			width: 500px;
-			height: 300px;
-			box-shadow: 5px 10px 10px black;
-			border: 2px solid black;
-			padding: 50px;
-			text-align: center;
-		}
-
-		.child2-1 {
-			background-color: rgb(199, 126, 31);
-			color: azure;
-			position: absolute;
-			top: 100px;
-			left: 30px;
-		}
-
-		.child2-2 {
-			background-color: rgb(29, 143, 105);
-			color: azure;
-		}
-
-		.child2-3 {
-			background-color: rgb(83, 35, 128);
-			color: azure;
-		}
-
-		.child2-4 {
-			background-color: rgb(150, 46, 20);
-			color: azure;
-		}
-
-		.child2-5 {
-			background-color: rgb(43, 51, 170);
-			color: azure;
-		}
-	</style>
-</head>
-
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Tabs example</title>
+    <style>
+      main {
+        position: relative;
+        height: 250vh;
+        margin-top: 30px;
+      }
+      div.text {
+        position: fixed;
+        top: 250px;
+        left: 830px;
+        font-size: 30px;
+        font-weight: bold;
+        border: 3px dashed;
+        padding: 15px 15px;
+        background-color: rgb(198, 228, 138);
+        border-radius: 10px;
+      }
+      div.parent-1 {
+        position: static;
+      }
+      div.parent-2 {
+        position: relative;
+      }
+      div.parent-3 {
+        position: fixed;
+      }
+      div.parent-4 {
+        position: absolute;
+      }
+      div.parent-5 {
+        position: sticky;
+      }
+      div.child1-1 {
+        position: static;
+        min-height: 50px;
+        background-color: rgb(109, 221, 184);
+        padding: 12px 10px;
+      }
+      div.child1-2 {
+        position: relative;
+        min-height: 50px;
+        background-color: rgb(80, 44, 126);
+        color: white;
+        padding: 12px 10px;
+        left: 50px;
+        bottom: 10px;
+      }
+      div.child1-3 {
+        position: fixed;
+        min-height: 50px;
+        background-color: rgb(153, 56, 0);
+        color: white;
+        padding: 12px 10px;
+        left: 50px;
+        top: 750px;
+      }
+      div.child1-4 {
+        position: absolute;
+        min-height: 50px;
+        background-color: rgb(11, 104, 8);
+        color: white;
+        padding: 12px 10px;
+        left: 65px;
+        top: 650px;
+      }
+      div.child1-5 {
+        position: sticky;
+        min-height: 50px;
+        background-color: rgb(104, 8, 8);
+        color: white;
+        padding: 12px 10px;
+        top: 100px;
+      }
+    </style>
+  </head>
+  <body>
 <header>
   <nav>
     <ul>
@@ -137,25 +113,211 @@
     >Anu belore dela'na - "Солнце ведет нас"</a
   >
 </header>
-	<main class="main__position">
-		<div class="static__parent"><b>static</b> Parent 1
-			<div class="child1-1">child 1.1 (<b>absolute</b>, стал строчным, <br> вышел за границы родителя, его место заняли другие элементы)</div>
-			<div class="child1-2">child 1.2 (<b>fixed</b>, стал строчным, прилип к окну, всегда на экране)</div>
-			<div class="child1-3">child 1.3 (<b>relative</b>, остается блочным, двигается относительно своей начальной позиции)</div>
-			<div class="child1-4">child 1.4</div>
-			<div class="child1-5">child 1.5</div>
-		</div>
+    <main>
+      <div class="text">Крути вверх-вниз!</div>
+      <div class="tabs">
+        <input type="radio" name="tab-btn" id="tab-btn-1" checked />
+        <label for="tab-btn-1">Parent: static</label>
+        <input type="radio" name="tab-btn" id="tab-btn-2" />
+        <label for="tab-btn-2">Parent: relative</label>
+        <input type="radio" name="tab-btn" id="tab-btn-3" />
+        <label for="tab-btn-3">Parent: fixed</label>
+        <input type="radio" name="tab-btn" id="tab-btn-4" />
+        <label for="tab-btn-4">Parent: absolute</label>
+        <input type="radio" name="tab-btn" id="tab-btn-5" />
+        <label for="tab-btn-5">Parent: sticky</label>
+        <div class="parent-1" id="content-1">
+          <h3 class="content">Block position : Static</h3>
+          <p>
+            Значение по умолчанию. Статичное позиционирование. Любой элемент,
+            добавленный на страницу, будет иметь это значение и будет расположен
+            в нормальном потоке документа согласно контексту форматирования
+            родительского элемента. Свойства left, right, top, bottom и z-index
+            игнорируются.
+          </p>
+          <br />
+          <p>
+            Элемент со значением position: static не является позиционированным
+            элементом. Это важный момент, потому что элементы с любым другим
+            значением свойства position создают внутри себя контекст наложения и
+            становятся опорными. Опорным элементом будем называть такой,
+            относительно которого позиционируются дочерние элементы.
+          </p>
+          <div class="child1-1">
+            <b>Child 1 : Static</b> (неподвижен, left/right/top/bottom и z-index
+            игнорируются)
+          </div>
+          <div class="child1-2">
+            Child 2 : Relative (left: 50px; bottom: 10px; Смещается относительно
+            "Parent")
+          </div>
+          <div class="child1-3">
+            Child 3 : Fixed (left: 50px; top: 750px; вырван из потока,
+            стабильная позиция относительно окна браузера, стал строчным)
+          </div>
+          <div class="child1-4">
+            Child 4 : Absolute (left: 65px; top: 650px; вырван из потока,
+            позиция относительно "Parent", но игнорирует "Parent=Static", стал
+            строчным)
+          </div>
+          <div class="child1-5">
+            Child 5 : Sticky (top: 100px; ведет себя как Static, пока не
+            достигнет указанной позиции относительно родителя, после чего
+            "прилипнет")
+          </div>
+        </div>
 
-		<div class="relative__parent"><b>relative</b> Parent 2
-			<div class="child2-1">child 2.1 (position absolute, стал строчным, <br> вышел за границы родителя, его место заняли другие элементы)</div>
-			<div class="child2-2">child 2.2</div>
-			<div class="child2-3">child 2.3</div>
-			<div class="child2-4">child 2.4</div>
-			<div class="child2-5">child 2.5</div>
-		</div>
-	</main>
+        <div class="parent-2" id="content-2">
+          <h3 class="content">Block position : Relative</h3>
+          <p>
+            Элемент позиционируется так же, как и статичный, но его отображение
+            может быть смещено относительно своего начального положения при
+            помощи свойств left, right, top, bottom. Это смещение чисто
+            визуальное и не затрагивает положение соседних элементов, кроме
+            случая, когда элемент выходит за границы родителя, имеющего
+            возможность прокрутки. <br />
+            На странице элемент будет занимать столько же места, как если бы он
+            имел статичное позиционирование.
+          </p>
+          <br /><br />
+          <div class="child1-1">
+            <b>Child 1 : Static</b> (неподвижен, left/right/top/bottom и z-index
+            игнорируются)
+          </div>
+          <div class="child1-2">
+            Child 2 : Relative (left: 50px; bottom: 10px; Смещается относительно
+            "Parent")
+          </div>
+          <div class="child1-3">
+            Child 3 : Fixed (left: 50px; top: 750px; вырван из потока,
+            стабильная позиция относительно окна браузера, стал строчным)
+          </div>
+          <div class="child1-4">
+            Child 4 : Absolute (left: 65px; top: 650px; вырван из потока,
+            позиция относительно "Parent", но игнорирует "Parent=Static", стал
+            строчным)
+          </div>
+          <div class="child1-5">
+            Child 5 : Sticky (top: 100px; ведет себя как Static, пока не
+            достигнет указанной позиции относительно родителя, после чего
+            "прилипнет")
+          </div>
+        </div>
 
-	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-</body>
-
+        <div class="parent-3" id="content-3">
+          <h3 class="content">Block position : Fixed</h3>
+          <p>
+            Иногда требуется позиционировать элемент не относительно родителя, а
+            относительно окна браузера вне зависимости от вложенности. Для
+            решения подобной задачи подходит position: fixed. У такого способа
+            позиционирования есть ряд особенностей: Элемент убирается из
+            основного потока документа. То есть перестаёт влиять на положение
+            окружающих элементов и на размер родителя. Элемент перестаёт
+            взаимодействовать со всеми элементами, кроме своих потомков. Элемент
+            позиционируется относительно окна браузера, за исключением случаев,
+            если один из родителей имеет значения свойств transform, perspective
+            или filter, отличные от none. В этом случае блок становится опорным
+          </p>
+          <div class="child1-1">
+            <b>Child 1 : Static</b> (неподвижен, left/right/top/bottom и z-index
+            игнорируются)
+          </div>
+          <div class="child1-2">
+            Child 2 : Relative (left: 50px; bottom: 10px; Смещается относительно
+            "Parent")
+          </div>
+          <div class="child1-3">
+            Child 3 : Fixed (left: 50px; top: 750px; вырван из потока,
+            стабильная позиция относительно окна браузера, стал строчным)
+          </div>
+          <div class="child1-4">
+            Child 4 : Absolute (left: 65px; top: 650px; вырван из потока,
+            позиция относительно "Parent", но игнорирует "Parent=Static", стал
+            строчным)
+          </div>
+          <div class="child1-5">
+            Child 5 : Sticky (top: 100px; ведет себя как Static, пока не
+            достигнет указанной позиции относительно родителя, после чего
+            "прилипнет")
+          </div>
+        </div>
+        <div class="parent-4" id="content-4">
+          <h3 class="content">Block position : Absolute</h3>
+          <p>
+            Способ позиционирования, кажущийся наиболее понятным. Мы просто
+            задаём абсолютное позиционирование и при помощи свойств left, right,
+            top, bottom регулируем положение элемента. Есть ряд особенностей
+            такого позиционирования: Элемент убирается из основного потока
+            документа. Элемент позиционируется относительно ближайшего
+            позиционированного предка. То есть ищет ближайшего опорного
+            родителя. Если элемент был частью строчного контекста
+            форматирования, он становится блочным. Если элемент был блочным и
+            занимал всю ширину своего родителя, то теперь его ширина будет
+            определяться шириной контента. Отступы элемента с position: absolute
+            не схлопываются с отступами соседних элементов.
+          </p>
+          <div class="child1-1">
+            <b>Child 1 : Static</b> (неподвижен, left/right/top/bottom и z-index
+            игнорируются)
+          </div>
+          <div class="child1-2">
+            Child 2 : Relative (left: 50px; bottom: 10px; Смещается относительно
+            "Parent")
+          </div>
+          <div class="child1-3">
+            Child 3 : Fixed (left: 50px; top: 750px; вырван из потока,
+            стабильная позиция относительно окна браузера, стал строчным)
+          </div>
+          <div class="child1-4">
+            Child 4 : Absolute (left: 65px; top: 650px; вырван из потока,
+            позиция относительно "Parent", но игнорирует "Parent=Static", стал
+            строчным)
+          </div>
+          <div class="child1-5">
+            Child 5 : Sticky (top: 100px; ведет себя как Static, пока не
+            достигнет указанной позиции относительно родителя, после чего
+            "прилипнет")
+          </div>
+        </div>
+        <div class="parent-5" id="content-5">
+          <h3 class="content">Block position : Sticky</h3>
+          <p>
+            Элемент позиционируется в нормальном потоке так же, как и статичный,
+            а затем смещается при помощи свойств left, right, top, bottom
+            относительно ближайшего родителя, имеющего прокрутку. Это свойство
+            применяется, когда нам нужно зафиксировать какой-либо элемент не
+            сразу, а при прокрутке родителя до какого-то известного положения.
+            Элемент будет вести себя как обычно до тех пор, пока родитель не
+            будет прокручен таким образом, что расстояние от верха родителя до
+            верхней границы элемента <b>[Child 5]</b> не станет меньше 100
+            пикселей (значения могут варьироваться). Как только прокрутка
+            достигнет такого значения, элемент зафиксируется в положении 100
+            пикселей от верха границы родителя
+          </p>
+          <div class="child1-1">
+            <b>Child 1 : Static</b> (неподвижен, left/right/top/bottom и z-index
+            игнорируются)
+          </div>
+          <div class="child1-2">
+            Child 2 : Relative (left: 50px; bottom: 10px; Смещается относительно
+            "Parent")
+          </div>
+          <div class="child1-3">
+            Child 3 : Fixed (left: 50px; top: 750px; вырван из потока,
+            стабильная позиция относительно окна браузера, стал строчным)
+          </div>
+          <div class="child1-4">
+            Child 4 : Absolute (left: 65px; top: 650px; вырван из потока,
+            позиция относительно "Parent", но игнорирует "Parent=Static", стал
+            строчным)
+          </div>
+          <div class="child1-5">
+            Child 5 : Sticky (top: 100px; ведет себя как Static, пока не
+            достигнет указанной позиции относительно родителя, после чего
+            "прилипнет")
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
