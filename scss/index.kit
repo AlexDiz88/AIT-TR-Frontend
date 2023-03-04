@@ -14,7 +14,7 @@
 </head>
 
 <body>
-	<div class="header"><!-- @import "../header.html" --></div>
+	<!-- @import "../header.html" -->
 	<main>
 		<h3 id="content" class="content">Содержание:</h3>
 		<h4><a href="#t1">1. Базовые теги HTML</a></h4>
@@ -29,33 +29,33 @@
 		<!-- 1. Базовые теги HTML -->
 		<h2 id="t1" class="title"><a href="#content">---Базовые теги HTML---</h2></a>
 		<p class="instruction"><span>&lt;!DOCTYPE html></span> - Сообщаем браузеру как стоит обрабатывать эту страницу (т.е. в формате HTML)</p>
-		<p class="instruction"><span>&lt;html lang="ru">...&lt;/html></span>- Оболочка документа, указываем язык содержимого</p>
-		<p class="instruction"><span>&lt;head>...&lt;/head></span>- Заголовок страницы, контейнер для других важных данных (не отображается)</p>
-		<p class="instruction"><span>&lt;title>...&lt;/title></span>- Заголовок страницы в браузере</p>
-		<p class="instruction"><span>&lt;link rel="stylesheet" href="css/style.css"></span>- Привязка CSS файла к HTML</p>
-		<p class="instruction"><span>&lt;meta http-equiv="Content-type" content="text/html; charset=UTF-8"></span>- Кодировка страницы</p>
+		<p class="instruction"><span>&lt;html lang="ru">...&lt;/html></span> - Оболочка документа, указываем язык содержимого</p>
+		<p class="instruction"><span>&lt;head>...&lt;/head></span> - Заголовок страницы, контейнер для других важных данных (не отображается)</p>
+		<p class="instruction"><span>&lt;title>...&lt;/title></span> - Заголовок страницы в браузере</p>
+		<p class="instruction"><span>&lt;link rel="stylesheet" href="css/style.css"></span> - Привязка CSS файла к HTML</p>
+		<p class="instruction"><span>&lt;meta http-equiv="Content-type" content="text/html; charset=UTF-8"></span> - Кодировка страницы</p>
 		<br>
-		<p class="hint">Теги «title» и «meta» - содержатся внутри тега «head», а сам «head» внутри тега «html». После тега «head» следует тег «body»</p>
+		<p class="hint">Теги <span class="tag">title</span> и <span class="tag">meta</span> - содержатся внутри тега <span class="tag">head</span>, а сам <span class="tag">head</span> внутри тега <span class="tag">html</span>. После тега <span class="tag">head</span> следует тег <span class="tag">body</span></p>
 		<br>
-		<p class="instruction"><span>&lt;body>...&lt;/body></span>- Отображаемое тело страницы</p>
-		<p class="instruction"><span>&lt;header>...&lt;/header> и &lt;footer>&lt;/footer></span>- блочные теги (на всю длину страницы). Отображаются вверху/снизу тела страницы</p>
-		<p class="instruction"><span>&lt;h1..h6>...&lt;/h1..h6></span>- заголовки разных размеров</p>
-		<p class="instruction"><span>&lt;div>...&lt;/div></span>- блочный тег, блок информации (всегда с новой строки и занимает всю длину)</p>
-		<p class="instruction"><span>&lt;span>...&lt;/span></span>- строчный тег, блок информации (равен длине текста)</p>
-		<p class="instruction"><span>&lt;p></span>- блочный тег, создает новый параграф. Используется для разграничения абзацев. Браузеры по умолчанию добавляют отступы до &lt;p> и после &lt;/p></p>
-		<p class="instruction"><span>&lt;img src="/source/pics/cat.jpeg" alt="Aleq" width="200" height="185" /></span>- используется для вставки изображений. Атрибут <b>«alt»</b> служит для отображения текста вместо картинки, если картинка по каким-то причинам не загрузилась. Также можно указать размеры с помощью атрибутов <b>«width»</b> и <b>«height»</b></p>
-		<p class="instruction"><span>&lt;a href="www.google.com" target="blank"><span class="black-marked"><i>Google</i></span>&lt;/a></span>- создает ссылку на страницу в интернете. При указании атрибута <b>target="blank"</b>, сайт откроется в новой вкладке. В качестве ссылки можно использовать как текст, так и изображение.</p>
+		<p class="instruction"><span>&lt;body>...&lt;/body></span> - Отображаемое тело страницы</p>
+		<p class="instruction"><span>&lt;header>...&lt;/header> и &lt;footer>&lt;/footer></span> - блочные теги (на всю длину страницы). Отображаются вверху/снизу тела страницы</p>
+		<p class="instruction"><span>&lt;h1..h6>...&lt;/h1..h6></span> - заголовки разных размеров</p>
+		<p class="instruction"><span>&lt;div>...&lt;/div></span> - блочный тег, блок информации (всегда с новой строки и занимает всю длину)</p>
+		<p class="instruction"><span>&lt;span>...&lt;/span></span> - строчный тег, блок информации (равен длине текста)</p>
+		<p class="instruction"><span>&lt;p></span> - блочный тег, создает новый параграф. Используется для разграничения абзацев. Браузеры по умолчанию добавляют отступы до &lt;p> и после &lt;/p></p>
+		<p class="instruction"><span>&lt;img src="/source/pics/cat.jpeg" alt="Aleq" width="200" height="185" /></span> - используется для вставки изображений. Атрибут <span class="atribute">«alt»</span> служит для отображения текста вместо картинки, если картинка по каким-то причинам не загрузилась. Также можно указать размеры с помощью атрибутов <span class="atribute">«width»</span> и <span class="atribute">«height»</span></p>
+		<p class="instruction"><span>&lt;a href="www.google.com" target="blank"><span class="black-marked"><i>Google</i></span>&lt;/a></span> - создает ссылку на страницу в интернете. При указании атрибута со значением <span class="atribute">target=</span><span class="parameter">"blank"</span>, сайт откроется в новой вкладке. В качестве ссылки можно использовать как текст, так и изображение.</p>
 		<br>
 		<p class="instruction"><span>&lt;p id="top"><span class="black-marked"><i>Оглавление</i></span>&lt;/p></span>- использование якорей, для перемещения по странице.</p>
 		<p class="instruction"><span>&lt;a href="#top"><span class="black-marked"><i>Наверх</i></span>&lt;/a></span>- якорь работает по атрибуту «id».</p>
 		<br>
-		<p class="instruction"><span>&lt;br></span>- перенос на новую строку</p>
-		<p class="instruction"><span>&lt;hr></span>- горизонтальная линия</p>
+		<p class="instruction"><span>&lt;br></span> - перенос на новую строку</p>
+		<p class="instruction"><span>&lt;hr></span> - горизонтальная линия</p>
 
 		<!-- 1.1. Теги списков -->
 
 		<h2 id="t1.1" class="subtitle"><a href="#content">Теги списков</a></h2>
-		<p class="instruction"><span>&lt;ul></span>- маркированный список (Unordered List). Имеет несколько типов маркировки: type="<b>disk/circle/square</b>"
+		<p class="instruction"><span>&lt;ul></span> - маркированный список (Unordered List). Имеет несколько типов маркировки: <span class="atribute">type=</span><span class="parameter">"disk/circle/square"</span>
 		<ul style="padding-left: 60px;">
 			<li type="disk" style="list-style: disc;">disk</li>
 			<li type="circle" style="list-style: circle;">circle</li>
@@ -63,7 +63,7 @@
 		</ul>
 		</p>
 
-		<p class="instruction"><span>&lt;ol></span>- нумерованный список (Ordered List)
+		<p class="instruction"><span>&lt;ol></span> - нумерованный список (Ordered List)
 			Имеет несколько типов маркировки: type="<b>1</b>" - цифры , type="<b>А</b>" - заглавные буквы, type="<b>а</b>" - строчные буквы, type="<b>I</b>" - заглавные римские цифры, type="<b>i</b>" - строчные римские цифры. Атрибут start="<b>5</b>" - c какого значения начать отсчет. Атрибут "<b>reversed</b>" - нумерация в обратном порядке
 		<ol style="padding-left: 60px;">
 			<li type="1">цифры</li>
@@ -93,17 +93,17 @@
 		<!-- 2. Теги форм -->
 
 		<h2 id="t2" class="title"><a href="#content">---Теги форм---</a></h2>
-		<p class="instruction"><span>&lt;form action="">&lt;/form></span>- оболочка формы (контейнер), блочный тег, отвечает за передачу данных. В графе <b>«action»</b> указывается путь. Оставив это поле пустым - будет <span class="red-marked">ошибка</span>. Можно поставить заглушку <b>#</b>.</p>
-		<p class="instruction"><span>&lt;form method="">&lt;/form></span>- метод передачи формы. Атрибут <b>«method»</b> может иметь 2 значения:</p>
-		<p class="description"><span class="atribute">«get»</span> - используется по умолчанию. Передача данных идет прямо в адресной строке, <b><i>видны</i></b> пользователю и могут быть использованы неоднократно.</p>
-		<p class="description"><span class="atribute">«post»</span> - передает данные <b><i>скрытно</i></b> используя запрос браузера. Подходит для больших объемов информации. Может передавать прикрепленные файлы с атрибутом <b>«enctype="multipart/form-data"»</b></p>
+		<p class="instruction"><span>&lt;form action="">&lt;/form></span>- оболочка формы (контейнер), блочный тег, отвечает за передачу данных. В графе <span class="atribute">«action»</span> указывается путь. Оставив это поле пустым - будет <span class="red-marked">ошибка</span>. Можно поставить заглушку <b>#</b>.</p>
+		<p class="instruction"><span>&lt;form method="">&lt;/form></span>- метод передачи формы. Атрибут <b><span class="atribute">«method»</span></b> может иметь 2 значения:</p>
+		<p class="description"><span class="parameter">«get»</span> - используется по умолчанию. Передача данных идет прямо в адресной строке, <b><i>видны</i></b> пользователю и могут быть использованы неоднократно.</p>
+		<p class="description"><span class="parameter">«post»</span> - передает данные <b><i>скрытно</i></b> используя запрос браузера. Подходит для больших объемов информации. Может передавать прикрепленные файлы с атрибутом и значением «<span class="atribute">enctype=</span><span class="parameter">"multipart/form-data"</span>»</p>
 
 		<!-- 2.1 Разновидности тега «input» -->
 
 		<h2 id="t2.1" class="subtitle"><a href="#content">Разновидности тега «input»</a></h2>
 
 		<p class="instruction"><span>&lt;input type="text" name="username"></span></p>
-		<p>Создает форму для ввода текста, например, имени пользователя. Вводимый текст виден пользователю. Значение <b>«value»</b> впишет в форму определенный текст заранее.</p>
+		<p>Создает форму для ввода текста, например, имени пользователя. Вводимый текст виден пользователю. Значение в атрибуте <span class="atribute">«value»</span> впишет в форму определенный текст заранее.</p>
 		<input placeholder="Введите имя" type="text" name="username">
 
 		<br><br>
@@ -120,7 +120,7 @@
 		<p class="hint">Ко всем типам форм с вводом данных можно применить атрибут <span class="atribute">«placeholder=""»</span>, который напишет подсказку внутри поля.</p>
 
 		<br>
-		<p class="instruction"><span>&lt;label for="id_x"><span class="black-marked"><i>Выберите пол:</i></span>&lt;/label></span>- используется для создания подписи к элементу формы, а также для расширения поля выбора/клика для "<b>input</b>" (особенно полезно для "<b>radio</b>" и "<b>checkbox</b>")</p>
+		<p class="instruction"><span>&lt;label for="id_x"><span class="black-marked"><i>Выберите пол:</i></span>&lt;/label></span>- используется для создания подписи к элементу формы, а также для расширения поля выбора/клика для <span class="tag">input</span> (особенно полезно для "<span class="parameter">radio</span>" и "<span class="parameter">checkbox</span>")</p>
 		<p class="instruction"><span>&lt;fieldset>&lt;legend><span class="black-marked"><i>Персональные данные</i></span>&lt;/legend>&lt;/fieldset></span></p>
 		<p>Группирует элементы формы (поля ввода <span class="tag">input</span>, <span class="tag">textarea</span>, выпадающие списки <span class="tag">select</span> и другие) в блок с характерным выделением границ. Опционально с помощью тега <span class="tag">legend</span> внутри <span class="tag">fieldset</span> можно задать заголовок для создаваемой группы (он может быть только один и обязательно должен идти первым вложенным элементом).</p>
 		<p class="instruction"><span>&lt;p>&lt;input <span class="atribute">checked</span> type="radio" name="sex" value="male"><span class="black-marked"><i>Мужской</i></span>&lt;/p></span></p>
@@ -158,14 +158,14 @@
 		<p>Форма прикрепления файла. Работает только в теге формы с атрибутом <span class="atribute">«post»</span> и «<span class="atribute">enctype</span>=<span class="parameter">"multipart/form-data"</span>» <a href="#t2">(см.выше)</a>.</p>
 		<p class="black-marked"><b><i>Скан/фото паспорта:</i></b><input type="file" name="file"></p>
 		<br>
-		<p class="attention">Значения атрибута <span class="atribute">«name»</span> всегда должны различаться во всех формах (кроме «radio»).</p>
+		<p class="attention">Значения атрибута <span class="atribute">«name»</span> всегда должны различаться во всех формах (кроме <span class="parameter">«radio»</span>).</p>
 
 		<!-- 2.2 Другие теги форм -->
 
 		<h2 id="t2.2" class="subtitle"><a href="#content">Другие теги форм</a></h2>
 
 		<p class="instruction"><span>&lt;textarea name="text" id="" cols="30" rows="10">&lt;/textarea></span></p>
-		<p>Форма для ввода многострочного текста, например примечания или комментария. Атрибуты <b>«cols»</b> и <b>«rows»</b> можно удалять, так как размеры настраиваются позже с помощью JS и CSS</p>
+		<p>Форма для ввода многострочного текста, например примечания или комментария. Атрибуты <span class="atribute">«cols»</span> и <span class="atribute">«rows»</span> можно удалять, так как размеры настраиваются позже с помощью <b>JS</b> и <b>CSS</b></p>
 		<textarea class="example" placeholder=" Ваш комментарий" name="text" cols="30" rows="5"></textarea>
 
 		<p class="instruction">
@@ -181,14 +181,14 @@
 			<option selected value="blue">Синий</option>
 			<option value="green">Зеленый</option>
 		</select>
-		<p>Выпадающий список. Теги <span class="tag">select</span> и <span class="tag">option</span> всегда используются в сочетании друг с другом, причем тег <span class="tag">option</span> должен быть вложен внутрь тега <span class="tag">select</span>. Можно перед одним из атрибутов <b>«value»</b> указать атрибут <b>«selected»</b>, тогда это значение будет выбрано заранее при загрузке/обновлении страницы. Если тегу <span class="tag">select</span> добавить атрибут <b>«multiple»</b>, то форма перестанет быть выпадающей и станет в виде списка.</p>
+		<p>Выпадающий список. Теги <span class="tag">select</span> и <span class="tag">option</span> всегда используются в сочетании друг с другом, причем тег <span class="tag">option</span> должен быть вложен внутрь тега <span class="tag">select</span>. Можно перед одним из атрибутов <span class="atribute">«value»</span> указать атрибут <span class="atribute">«selected»</span>, тогда это значение будет выбрано заранее при загрузке/обновлении страницы. Если тегу <span class="tag">select</span> добавить атрибут <span class="atribute">«multiple»</span>, то форма перестанет быть выпадающей и станет в виде списка.</p>
 		<select multiple class="example" name="color">
 			<option value="red">Красный</option>
 			<option selected value="blue">Синий</option>
 			<option value="green">Зеленый</option>
 		</select>
 
-		<p class="hint">К любому тегу формы кроме <span class="tag">form</span> можно применить атрибут «disabled», который сделает форму неактивной и не отправит данные из неё на сервер.</p>
+		<p class="hint">К любому тегу формы кроме <span class="tag">form</span> можно применить атрибут <span class="atribute">«disabled»</span>, который сделает форму неактивной и не отправит данные из неё на сервер.</p>
 		<br>
 		<p class="hint">Ко всем тегам можно применить атрибут <span class="atribute">«tabindex»</span> с порядковым номером. Данный номер определяет очередность форм при переключении по ним с помощью кнопки «Tab». Для всех значений тега <b>«input type="radio"»</b> атрибут <span class="atribute">«tabindex»</span> должен быть указан с одинаковым номером.</p>
 

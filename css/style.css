@@ -91,11 +91,7 @@ h6 {
 /* Конец очистки стилей */
 body {
   height: 100vh;
-  background-image: radial-gradient(
-    circle farthest-corner at 10% 20%,
-    rgba(199, 230, 216, 0.46) 0.1%,
-    rgba(233, 226, 226, 0.28) 90.1%
-  );
+  background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(199, 230, 216, 0.46) 0.1%, rgba(233, 226, 226, 0.28) 90.1%);
   background-size: cover;
   background-position: center;
   font-family: Marmelad;
@@ -200,7 +196,6 @@ nav ul li:hover > ul {
 }
 
 /* END (Header + Menu) */
-
 main {
   /* задаем отступ для страницы*/
   padding: 100px 0 0 100px;
@@ -312,7 +307,7 @@ span.black-marked {
   font-size: 17px;
 }
 
-.tag {
+span.tag {
   font-size: 21px;
   font-weight: bold;
   color: #113e9e;
@@ -366,7 +361,7 @@ a.goto:active {
 
 /*----------------------------------*/
 /*---------CSS теги "input"--------*/
-input[type="text"] {
+input[type=text] {
   width: 250px;
   padding: 12px 20px;
   -webkit-box-sizing: border-box;
@@ -377,11 +372,11 @@ input[type="text"] {
   outline: none;
 }
 
-input[type="text"]:focus {
+input[type=text]:focus {
   border: 3px solid #555;
 }
 
-input[type="password"] {
+input[type=password] {
   width: 250px;
   padding: 12px 20px;
   -webkit-box-sizing: border-box;
@@ -392,11 +387,11 @@ input[type="password"] {
   outline: none;
 }
 
-input[type="password"]:focus {
+input[type=password]:focus {
   border: 3px solid #070aa7;
 }
 
-input[type="tel"] {
+input[type=tel] {
   width: 250px;
   padding: 12px 20px;
   -webkit-box-sizing: border-box;
@@ -407,11 +402,11 @@ input[type="tel"] {
   outline: none;
 }
 
-input[type="tel"]:focus {
+input[type=tel]:focus {
   border: 3px solid #860505;
 }
 
-input[type="radio"] {
+input[type=radio] {
   background: #fff;
   border: 2px solid #ddd;
   display: inline-block;
@@ -424,12 +419,12 @@ input[type="radio"] {
   text-align: center;
 }
 
-input[type="radio"]:focus {
+input[type=radio]:focus {
   width: 25px;
   height: 25px;
 }
 
-input[type="checkbox"] {
+input[type=checkbox] {
   display: inline-block;
   vertical-align: middle;
   width: 22px;
@@ -437,16 +432,16 @@ input[type="checkbox"] {
   margin: 0 10px 3px 30px;
 }
 
-input[type="checkbox"]:hover {
+input[type=checkbox]:hover {
   -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.719);
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.719);
 }
 
-input[type="file"] {
+input[type=file] {
   margin-left: 10px;
 }
 
-input[type="date"] {
+input[type=date] {
   font-size: 17px;
   font-weight: bold;
   background-color: #f1df3b;
@@ -484,15 +479,18 @@ td.column-text {
   font-size: 20px;
   font-weight: bold;
 }
+
 /*---------END тегов таблиц th/tr/td--------*/
 /*----------------------------------*/
 /*---------Табы(tabs)--------*/
 .tabs {
   font-size: 0; /*убираем весь текст*/
 }
-.tabs > input[type="radio"] {
+
+.tabs > input[type=radio] {
   display: none;
 }
+
 .tabs > div {
   /* скрыть контент по умолчанию */
   display: none;
@@ -502,10 +500,12 @@ td.column-text {
   font-size: 16px;
   height: 700px;
   width: 700px;
-  box-shadow: 5px 10px 10px black;
+  -webkit-box-shadow: 5px 10px 10px black;
+          box-shadow: 5px 10px 10px black;
   line-height: 25px;
   border-radius: 10px;
 }
+
 /* отобразить контент, связанный с выбранной радиокнопкой */
 #tab-btn-1:checked ~ #content-1,
 #tab-btn-2:checked ~ #content-2,
@@ -514,32 +514,40 @@ td.column-text {
 #tab-btn-5:checked ~ #content-5 {
   display: block;
 }
+
 .tabs > label {
   display: inline-block;
   text-align: center;
   vertical-align: middle;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   background-color: #8a8989;
   color: #ffffff;
   border: 1px solid black;
-  padding: 5px 12px;
-  border-radius: 5px;
+  padding: 5px 11px;
+  /* border-radius: 5px; */
   font-size: 17px;
   line-height: 1.5;
+  -webkit-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
   cursor: pointer;
   position: relative;
-  top: -1px;
+  /* top: -1px; */
+  left: 8px;
 }
+
 .tabs > label:not(:first-of-type) {
   margin-left: 1px;
 }
-.tabs > input[type="radio"]:checked + label {
-  background-color: rgb(68, 68, 68);
+
+.tabs > input[type=radio]:checked + label {
+  background-color: rgb(58, 58, 58);
   border-bottom: 1px solid rgba(0, 0, 0, 0);
 }
-/*---------END табов(tabs)--------*/
 
+/*---------END табов(tabs)--------*/
 button.example {
   color: rgb(240, 240, 240);
   background-color: rgb(160, 64, 9);

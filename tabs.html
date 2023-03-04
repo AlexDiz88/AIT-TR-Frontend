@@ -17,6 +17,21 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>Tabs example</title>
     <style>
+      main {
+        position: relative;
+        height: 250vh;
+      }
+      div.text {
+        position: fixed;
+        top: 250px;
+        left: 830px;
+        font-size: 30px;
+        font-weight: bold;
+        border: 3px dashed;
+        padding: 15px 15px;
+        background-color: rgb(198, 228, 138);
+        border-radius: 10px;
+      }
       div.parent-1 {
         position: static;
       }
@@ -25,8 +40,12 @@
       }
       div.parent-3 {
         position: fixed;
-        /* top: 180px;
-        left: 150px; */
+      }
+      div.parent-4 {
+        position: absolute;
+      }
+      div.parent-5 {
+        position: sticky;
       }
       div.child1-1 {
         position: static;
@@ -80,7 +99,7 @@
         <a class="main__menu" href="homeworks_list.html">Домашние работы</a>
       </li>
       <li>
-        <a class="main__menu" href="./position.html">Учебник</a>
+        <a class="main__menu" href="tutorial_html_book.html">Учебник</a>
         <ul>
           <li><a class="main__menu" href="blank.html">HTML</a></li>
           <li><a class="main__menu" href="tabs.html">CSS</a></li>
@@ -102,6 +121,7 @@
   >
 </header>
     <main>
+      <div class="text">Крути вверх-вниз!</div>
       <div class="tabs">
         <input type="radio" name="tab-btn" id="tab-btn-1" checked />
         <label for="tab-btn-1">Parent: static</label>
@@ -230,15 +250,81 @@
         </div>
         <div class="parent-4" id="content-4">
           <h3 class="content">Block position : Absolute</h3>
-          <p class="attention">В разработке</p>
+          <p>
+            Способ позиционирования, кажущийся наиболее понятным. Мы просто
+            задаём абсолютное позиционирование и при помощи свойств left, right,
+            top, bottom регулируем положение элемента. Есть ряд особенностей
+            такого позиционирования: Элемент убирается из основного потока
+            документа. Элемент позиционируется относительно ближайшего
+            позиционированного предка. То есть ищет ближайшего опорного
+            родителя. Если элемент был частью строчного контекста
+            форматирования, он становится блочным. Если элемент был блочным и
+            занимал всю ширину своего родителя, то теперь его ширина будет
+            определяться шириной контента. Отступы элемента с position: absolute
+            не схлопываются с отступами соседних элементов.
+          </p>
+          <div class="child1-1">
+            <b>Child 1 : Static</b> (неподвижен, left/right/top/bottom и z-index
+            игнорируются)
+          </div>
+          <div class="child1-2">
+            Child 2 : Relative (left: 50px; bottom: 10px; Смещается относительно
+            "Parent")
+          </div>
+          <div class="child1-3">
+            Child 3 : Fixed (left: 50px; top: 750px; вырван из потока,
+            стабильная позиция относительно окна браузера, стал строчным)
+          </div>
+          <div class="child1-4">
+            Child 4 : Absolute (left: 65px; top: 650px; вырван из потока,
+            позиция относительно "Parent", но игнорирует "Parent=Static", стал
+            строчным)
+          </div>
+          <div class="child1-5">
+            Child 5 : Sticky (top: 100px; ведет себя как Static, пока не
+            достигнет указанной позиции относительно родителя, после чего
+            "прилипнет")
+          </div>
         </div>
         <div class="parent-5" id="content-5">
           <h3 class="content">Block position : Sticky</h3>
-          <p class="attention">В разработке</p>
+          <p>
+            Элемент позиционируется в нормальном потоке так же, как и статичный,
+            а затем смещается при помощи свойств left, right, top, bottom
+            относительно ближайшего родителя, имеющего прокрутку. Это свойство
+            применяется, когда нам нужно зафиксировать какой-либо элемент не
+            сразу, а при прокрутке родителя до какого-то известного положения.
+            Элемент будет вести себя как обычно до тех пор, пока родитель не
+            будет прокручен таким образом, что расстояние от верха родителя до
+            верхней границы элемента <b>[Child 5]</b> не станет меньше 100
+            пикселей (значения могут варьироваться). Как только прокрутка
+            достигнет такого значения, элемент зафиксируется в положении 100
+            пикселей от верха границы родителя
+          </p>
+          <div class="child1-1">
+            <b>Child 1 : Static</b> (неподвижен, left/right/top/bottom и z-index
+            игнорируются)
+          </div>
+          <div class="child1-2">
+            Child 2 : Relative (left: 50px; bottom: 10px; Смещается относительно
+            "Parent")
+          </div>
+          <div class="child1-3">
+            Child 3 : Fixed (left: 50px; top: 750px; вырван из потока,
+            стабильная позиция относительно окна браузера, стал строчным)
+          </div>
+          <div class="child1-4">
+            Child 4 : Absolute (left: 65px; top: 650px; вырван из потока,
+            позиция относительно "Parent", но игнорирует "Parent=Static", стал
+            строчным)
+          </div>
+          <div class="child1-5">
+            Child 5 : Sticky (top: 100px; ведет себя как Static, пока не
+            достигнет указанной позиции относительно родителя, после чего
+            "прилипнет")
+          </div>
         </div>
       </div>
     </main>
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
   </body>
 </html>
