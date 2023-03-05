@@ -123,12 +123,44 @@ header {
   padding: 0 4%;
   -webkit-box-shadow: 0 5px 10px black;
           box-shadow: 0 5px 10px black;
-  z-index: 10;
+  z-index: 100;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header nav ul li {
+  position: relative;
+  float: left;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+header nav ul li a.main__menu {
+  display: block;
+  padding: 8px 15px;
+  font-size: 18px;
+  font-weight: bold;
+  height: 50px;
+  color: rgb(238, 238, 238);
+  background-color: rgb(122, 29, 45);
+}
+
+header nav ul li a:hover {
+  color: rgb(122, 29, 45);
+  background-color: rgb(238, 238, 238);
 }
 
 header .logo {
+  display: block;
   font-size: 18px;
   font-weight: bold;
+  height: 50px;
+  padding: 8px 5px 8px 50px;
   color: rgb(253, 253, 253);
   text-shadow: 3px 4px 3px black;
   -webkit-transition: 6s;
@@ -138,30 +170,11 @@ header .logo {
 
 header .logo:hover {
   color: rgb(255, 196, 0);
+  background-color: rgb(122, 29, 45);
   opacity: 1;
   scale: 1.1;
   -webkit-transition: 6s linear;
   transition: 6s linear;
-}
-
-header nav ul li {
-  position: relative;
-  float: left;
-}
-
-header nav ul li a.main__menu {
-  display: block;
-  padding: 8px 15px;
-  font-size: 18px;
-  font-weight: bold;
-  min-height: 40px;
-  color: rgb(238, 238, 238);
-  background-color: rgb(122, 29, 45);
-}
-
-header nav ul li a:hover {
-  color: rgb(122, 29, 45);
-  background-color: rgb(238, 238, 238);
 }
 
 nav ul li ul {
