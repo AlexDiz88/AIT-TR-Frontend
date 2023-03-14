@@ -6,9 +6,18 @@ const clonedBtn = btn.cloneNode(true);
 clonedBtn.id = "magic-btn-2";
 
 btn.addEventListener("click", () => {
-  // при нажатии на первую кнопку
-  // работайте с clonedBtn
-  // ваш код начинается здесь
+  clonedBtn.innerHTML = "Я изменю тебя";
+  document.body.appendChild(clonedBtn);
+  clonedBtn.style.backgroundColor = "#a78b71";
+  clonedBtn.style.color = "white";
 });
 
-// здесь можете создать EventListener для второй кнопки
+clonedBtn.addEventListener("click", () => {
+  btn.style.backgroundColor = "#9c4a1a";
+  btn.style.color = "black";
+});
+
+const taskText = document.createElement("p");
+document.getElementById("text").appendChild(taskText);
+taskText.innerHTML = '<a href="README.md">Ссылка на задание</a>';
+taskText.style.fontSize = "18px";
