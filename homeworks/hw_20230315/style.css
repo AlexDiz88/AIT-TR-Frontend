@@ -1,0 +1,196 @@
+body {
+  padding: 30px;
+  background-color: rgb(56, 56, 56);
+}
+
+a,
+a:visited {
+  display: block;
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.wrapper {
+  display: flex;
+  width: 600px;
+  margin: 0 auto;
+  background-color: whitesmoke;
+  box-shadow: 1px 1px 10px 3px black;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+}
+
+.aside {
+  padding: 15px 0;
+  width: 40%;
+  background-color: #38868b;
+  color: whitesmoke;
+  font-size: 17px;
+}
+
+.photo-container {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.photo {
+  background: url(profile_photo.png) no-repeat;
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  background-size: contain;
+  border: 1px solid whitesmoke;
+  border-radius: 20%;
+  box-shadow: 0px 0px 15px whitesmoke;
+}
+
+.title {
+  display: block;
+  text-transform: uppercase;
+  background-color: #88b6b9;
+  padding: 5px 0 5px 10px;
+  margin: 10px 0 0 0;
+}
+
+.text {
+  font-size: 15px;
+  padding: 3px 0 0px 10px;
+  /* margin-bottom: 5px; */
+}
+
+.text > div {
+  margin: 3px 0;
+}
+
+#tel::before {
+  content: "";
+  display: inline-block;
+  background: url(https://cdn-icons-png.flaticon.com/128/5585/5585856.png)
+    no-repeat;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  margin: 0px 5px -5px 0px;
+}
+#email::before {
+  content: "";
+  display: inline-block;
+  background: url(https://cdn-icons-png.flaticon.com/128/8991/8991934.png)
+    no-repeat;
+  width: 25px;
+  height: 25px;
+  background-size: contain;
+  margin: 0px 5px -8px -2px;
+}
+
+#telegram::before {
+  content: "";
+  display: inline-block;
+  background: url(https://t4.ftcdn.net/jpg/01/39/21/49/240_F_139214946_aaMFlMXe37CZ09c7esYWFnm7BmC1dlz3.webp)
+    no-repeat;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  margin: 0 5px -5px 0;
+}
+
+#github::before {
+  content: "";
+  display: inline-block;
+  background: url(free-icon-github-2504911.png) no-repeat;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  margin: 0 5px -5px 0;
+}
+
+.text__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.level {
+  font-size: 12px;
+  color: yellow;
+  padding: 2px 5px 0 0;
+}
+
+.block {
+  width: 60%;
+}
+
+.personal {
+  padding: 10px;
+}
+
+.name {
+  padding-top: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+  color: #38868b;
+}
+
+.job {
+  padding-top: 15px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #38868b;
+}
+
+.age,
+.address {
+  font-size: 15px;
+  font-weight: bold;
+  padding-top: 5px;
+}
+
+.subtitle {
+  background-color: #d9eeb9;
+  /* color: #38868b; */
+  text-align: center;
+  font-weight: bold;
+  height: 35px;
+  padding: 10px 0 0 0px;
+}
+
+.experience {
+  display: flex;
+  flex-direction: column;
+}
+
+.work1,
+.work2 {
+  display: flex;
+  flex-direction: row;
+}
+
+.dates {
+  width: 25%;
+  padding: 12px 0 0 5px;
+  font-size: 15px;
+}
+
+.place {
+  width: 75%;
+  padding: 10px 3px;
+}
+
+.company-name {
+  font-weight: bold;
+  font-size: 19px;
+}
+
+.position {
+  font-style: italic;
+  font-size: 16px;
+  padding-top: 5px;
+  font-weight: bold;
+  color: #38868b;
+}
+
+.responsibilities {
+  font-size: 13px;
+  margin-left: -40px;
+}
