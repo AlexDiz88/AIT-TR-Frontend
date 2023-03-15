@@ -27,7 +27,6 @@ body {
   width: 100px;
   border: 5px solid black;
   border-top: none;
-  transition-property: ;
   transition: linear 5s;
 }
 .coffecup:hover {
