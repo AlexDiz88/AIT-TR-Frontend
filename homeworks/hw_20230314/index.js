@@ -7,6 +7,7 @@ clonedBtn.id = "magic-btn-2";
 
 btn.addEventListener("click", () => {
   clonedBtn.innerHTML = "Я изменю тебя";
+  clonedBtn.classList.add("second-btn");
   document.body.appendChild(clonedBtn);
   clonedBtn.style.backgroundColor = "#a78b71";
   clonedBtn.style.color = "white";
