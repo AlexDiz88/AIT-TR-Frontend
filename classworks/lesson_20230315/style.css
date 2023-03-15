@@ -1,3 +1,39 @@
+body {
+  padding: 20px;
+  background-color: beige;
+}
+
+.coffecup:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s;
+}
+.coffecup-1b:after {
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  background: #fff;
+}
+.coffecup-1b:hover:after,
+.coffecup-1b:active:after {
+  height: 100%;
+}
+
+.coffecup {
+  margin-top: 20px;
+  height: 100px;
+  width: 100px;
+  border: 5px solid black;
+  border-top: none;
+  transition-property: ;
+  transition: linear 5s;
+}
+.coffecup:hover {
+  background-color: burlywood;
+}
+
 .box1,
 .box2,
 .box3,
