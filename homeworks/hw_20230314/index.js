@@ -19,5 +19,6 @@ clonedBtn.addEventListener("click", () => {
 
 const taskText = document.createElement("p");
 document.getElementById("text").appendChild(taskText);
-taskText.innerHTML = '<a href="README.md">Ссылка на задание</a>';
+taskText.innerHTML =
+  '<a href="https://github.com/AlexDiz88/AIT-TR-Frontend/blob/master/homeworks/hw_20230314/README.md">Ссылка на задание</a>';
 taskText.style.fontSize = "18px";
