@@ -1,0 +1,29 @@
+.wrapper {
+  font-size: 20px;
+  margin: 30px;
+}
+
+button {
+  height: 50px;
+  background-color: brown;
+  color: whitesmoke;
+  border-radius: 5px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+#decrease-font-btn {
+  height: 40px;
+  background-color: chocolate;
+  font-size: 14px;
+}
+
+#get-font-btn {
+  height: 45px;
+  background-color: rgb(55, 104, 10);
+  font-size: 15px;
+}
+
+p {
+  font-size: 22px;
+}

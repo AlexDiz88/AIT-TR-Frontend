@@ -1,3 +1,5 @@
+"use strict";
+
 const increaseFontBtn = document.getElementById("increase-font-btn");
 const decreaseFontBtn = document.getElementById("decrease-font-btn");
 let text = document.getElementsByTagName("p");
