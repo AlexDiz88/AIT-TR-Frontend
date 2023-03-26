@@ -66,5 +66,6 @@ function getCatImage2() {
   });
   let obj = objPromise.then((obj) => {
     catImg.src = obj.file;
+    return obj;
   });
 }

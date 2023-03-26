@@ -1,5 +1,6 @@
 "use strict";
 
+// Задание 1
 const btn = document.getElementById("btn");
 
 btn.addEventListener("click", () => {
@@ -36,4 +37,46 @@ function checkParentheses() {
     }
   }
   return stack.length === 0;
+}
+
+// Задание 2
+const nextBtn = document.getElementById("next-btn");
+const finishBtn = document.getElementById("finish-btn");
+const usersArray = [];
+
+nextBtn.addEventListener("click", () => {
+  let userFirstName = document.getElementById("firstname").value;
+  let userLastName = document.getElementById("lastname").value;
+  createUser(userFirstName, userLastName);
+  document.getElementById("firstname").value = "";
+  document.getElementById("lastname").value = "";
+});
+
+finishBtn.addEventListener("click", () => {
+  printUsers();
+});
+
+function createUser(firstname, lastname) {
+  let user = {
+    name: firstname,
+    surname: lastname,
+  };
+  if (user.name !== "" || user.surname !== "") {
+    usersArray.push(user);
+  }
+}
+
+function printUsers() {
+  let userListBlock = document.getElementById("result2");
+  while (userListBlock.firstChild) {
+    userListBlock.removeChild(userListBlock.firstChild);
+  }
+
+  let ulListElement = document.createElement("ul");
+  userListBlock.appendChild(ulListElement);
+  for (let i = 0; i < usersArray.length; i++) {
+    let li = ulListElement.appendChild(document.createElement("li"));
+    li.innerText = usersArray[i].name + " " + usersArray[i].surname;
+  }
+  console.log(usersArray);
 }
