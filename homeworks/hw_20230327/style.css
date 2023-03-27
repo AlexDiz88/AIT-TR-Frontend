@@ -1,0 +1,18 @@
+body {
+  background-color: rgb(46, 52, 82);
+}
+.wrapper {
+  margin: 25px;
+  padding: 25px;
+}
+a,
+a:visited {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+label {
+  margin-top: 10px;
+  color: rgb(114, 255, 95);
+  font-size: 15px;
+}
